@@ -8,11 +8,11 @@ if [ ! -d /.composer ]; then
     mkdir /.composer
 fi
 
+cp .env.example .env
+
 npm install
 
 composer install
-
-php artisan migrate:fresh --seed
 
 chmod -R ugo+rw /.composer
 
@@ -24,6 +24,8 @@ cat .env | grep -q APP_KEY=base64
 if [ ! "$?" -eq 0 ]; then
     php artisan key:generate
 fi
+
+php artisan migrate:fresh --seed
 
 if [ $# -gt 0 ];then
     exec gosu $WWWUSER "$@"
