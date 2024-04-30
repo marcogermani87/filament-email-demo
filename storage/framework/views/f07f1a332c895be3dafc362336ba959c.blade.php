@@ -1,0 +1,1 @@
+<livewire:filament-language-switch key='fls-in-panels' />

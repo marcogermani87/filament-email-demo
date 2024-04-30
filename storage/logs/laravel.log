@@ -1,0 +1,1321 @@
+[2024-04-29 17:42:09] production.ERROR: Command "seed" is not defined.
+
+Did you mean one of these?
+    db:seed
+    make:seeder {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"seed\" is not defined.
+
+Did you mean one of these?
+    db:seed
+    make:seeder at /home/marco/projects/private/filament-email-demo/vendor/symfony/console/Application.php:704)
+[stacktrace]
+#0 /home/marco/projects/private/filament-email-demo/vendor/symfony/console/Application.php(260): Symfony\\Component\\Console\\Application->find()
+#1 /home/marco/projects/private/filament-email-demo/vendor/symfony/console/Application.php(169): Symfony\\Component\\Console\\Application->doRun()
+#2 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Symfony\\Component\\Console\\Application->run()
+#3 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1183): Illuminate\\Foundation\\Console\\Kernel->handle()
+#4 /home/marco/projects/private/filament-email-demo/artisan(13): Illuminate\\Foundation\\Application->handleCommand()
+#5 {main}
+"} 
+[2024-04-29 17:42:16] production.ERROR: Database file at path [/home/marco/projects/private/filament-email-demo/database/database.sqlite] does not exist. Ensure this is an absolute path to the database. (Connection: sqlite, SQL: insert into "users" ("name", "email", "password", "updated_at", "created_at") values (User, user@example.com, $2y$12$05IM.ccxIHlfNHryCXqx.u20tMSzJGLeP/z1qfv24X9Esm38XgcSy, 2024-04-29 17:42:16, 2024-04-29 17:42:16)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 0): Database file at path [/home/marco/projects/private/filament-email-demo/database/database.sqlite] does not exist. Ensure this is an absolute path to the database. (Connection: sqlite, SQL: insert into \"users\" (\"name\", \"email\", \"password\", \"updated_at\", \"created_at\") values (User, user@example.com, $2y$12$05IM.ccxIHlfNHryCXqx.u20tMSzJGLeP/z1qfv24X9Esm38XgcSy, 2024-04-29 17:42:16, 2024-04-29 17:42:16)) at /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php:813)
+[stacktrace]
+#0 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(767): Illuminate\\Database\\Connection->runQueryCallback()
+#1 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(560): Illuminate\\Database\\Connection->run()
+#2 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(524): Illuminate\\Database\\Connection->statement()
+#3 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Query/Processors/Processor.php(32): Illuminate\\Database\\Connection->insert()
+#4 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3600): Illuminate\\Database\\Query\\Processors\\Processor->processInsertGetId()
+#5 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(2026): Illuminate\\Database\\Query\\Builder->insertGetId()
+#6 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1338): Illuminate\\Database\\Eloquent\\Builder->__call()
+#7 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1303): Illuminate\\Database\\Eloquent\\Model->insertAndSetId()
+#8 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1142): Illuminate\\Database\\Eloquent\\Model->performInsert()
+#9 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(1069): Illuminate\\Database\\Eloquent\\Model->save()
+#10 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Support/helpers.php(359): Illuminate\\Database\\Eloquent\\Builder->Illuminate\\Database\\Eloquent\\{closure}()
+#11 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(1068): tap()
+#12 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Support/Traits/ForwardsCalls.php(23): Illuminate\\Database\\Eloquent\\Builder->create()
+#13 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2340): Illuminate\\Database\\Eloquent\\Model->forwardCallTo()
+#14 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2352): Illuminate\\Database\\Eloquent\\Model->__call()
+#15 /home/marco/projects/private/filament-email-demo/database/seeders/DatabaseSeeder.php(25): Illuminate\\Database\\Eloquent\\Model::__callStatic()
+#16 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Database\\Seeders\\DatabaseSeeder->run()
+#17 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#18 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#19 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#20 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#21 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Seeder.php(184): Illuminate\\Container\\Container->call()
+#22 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Seeder.php(193): Illuminate\\Database\\Seeder->Illuminate\\Database\\{closure}()
+#23 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Console/Seeds/SeedCommand.php(70): Illuminate\\Database\\Seeder->__invoke()
+#24 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Concerns/GuardsAttributes.php(155): Illuminate\\Database\\Console\\Seeds\\SeedCommand->Illuminate\\Database\\Console\\Seeds\\{closure}()
+#25 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Console/Seeds/SeedCommand.php(69): Illuminate\\Database\\Eloquent\\Model::unguarded()
+#26 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Database\\Console\\Seeds\\SeedCommand->handle()
+#27 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#28 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#29 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#30 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#31 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Console/Command.php(212): Illuminate\\Container\\Container->call()
+#32 /home/marco/projects/private/filament-email-demo/vendor/symfony/console/Command/Command.php(279): Illuminate\\Console\\Command->execute()
+#33 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Console/Command.php(181): Symfony\\Component\\Console\\Command\\Command->run()
+#34 /home/marco/projects/private/filament-email-demo/vendor/symfony/console/Application.php(1049): Illuminate\\Console\\Command->run()
+#35 /home/marco/projects/private/filament-email-demo/vendor/symfony/console/Application.php(318): Symfony\\Component\\Console\\Application->doRunCommand()
+#36 /home/marco/projects/private/filament-email-demo/vendor/symfony/console/Application.php(169): Symfony\\Component\\Console\\Application->doRun()
+#37 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Symfony\\Component\\Console\\Application->run()
+#38 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1183): Illuminate\\Foundation\\Console\\Kernel->handle()
+#39 /home/marco/projects/private/filament-email-demo/artisan(13): Illuminate\\Foundation\\Application->handleCommand()
+#40 {main}
+
+[previous exception] [object] (Illuminate\\Database\\SQLiteDatabaseDoesNotExistException(code: 0): Database file at path [/home/marco/projects/private/filament-email-demo/database/database.sqlite] does not exist. Ensure this is an absolute path to the database. at /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Connectors/SQLiteConnector.php:34)
+[stacktrace]
+#0 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(222): Illuminate\\Database\\Connectors\\SQLiteConnector->connect()
+#1 [internal function]: Illuminate\\Database\\Connectors\\ConnectionFactory->Illuminate\\Database\\Connectors\\{closure}()
+#2 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(1219): call_user_func()
+#3 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(565): Illuminate\\Database\\Connection->getPdo()
+#4 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(800): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}()
+#5 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(767): Illuminate\\Database\\Connection->runQueryCallback()
+#6 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(560): Illuminate\\Database\\Connection->run()
+#7 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(524): Illuminate\\Database\\Connection->statement()
+#8 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Query/Processors/Processor.php(32): Illuminate\\Database\\Connection->insert()
+#9 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3600): Illuminate\\Database\\Query\\Processors\\Processor->processInsertGetId()
+#10 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(2026): Illuminate\\Database\\Query\\Builder->insertGetId()
+#11 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1338): Illuminate\\Database\\Eloquent\\Builder->__call()
+#12 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1303): Illuminate\\Database\\Eloquent\\Model->insertAndSetId()
+#13 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1142): Illuminate\\Database\\Eloquent\\Model->performInsert()
+#14 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(1069): Illuminate\\Database\\Eloquent\\Model->save()
+#15 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Support/helpers.php(359): Illuminate\\Database\\Eloquent\\Builder->Illuminate\\Database\\Eloquent\\{closure}()
+#16 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(1068): tap()
+#17 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Support/Traits/ForwardsCalls.php(23): Illuminate\\Database\\Eloquent\\Builder->create()
+#18 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2340): Illuminate\\Database\\Eloquent\\Model->forwardCallTo()
+#19 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2352): Illuminate\\Database\\Eloquent\\Model->__call()
+#20 /home/marco/projects/private/filament-email-demo/database/seeders/DatabaseSeeder.php(25): Illuminate\\Database\\Eloquent\\Model::__callStatic()
+#21 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Database\\Seeders\\DatabaseSeeder->run()
+#22 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#23 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#24 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#25 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#26 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Seeder.php(184): Illuminate\\Container\\Container->call()
+#27 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Seeder.php(193): Illuminate\\Database\\Seeder->Illuminate\\Database\\{closure}()
+#28 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Console/Seeds/SeedCommand.php(70): Illuminate\\Database\\Seeder->__invoke()
+#29 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Concerns/GuardsAttributes.php(155): Illuminate\\Database\\Console\\Seeds\\SeedCommand->Illuminate\\Database\\Console\\Seeds\\{closure}()
+#30 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Console/Seeds/SeedCommand.php(69): Illuminate\\Database\\Eloquent\\Model::unguarded()
+#31 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Database\\Console\\Seeds\\SeedCommand->handle()
+#32 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#33 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#34 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#35 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#36 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Console/Command.php(212): Illuminate\\Container\\Container->call()
+#37 /home/marco/projects/private/filament-email-demo/vendor/symfony/console/Command/Command.php(279): Illuminate\\Console\\Command->execute()
+#38 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Console/Command.php(181): Symfony\\Component\\Console\\Command\\Command->run()
+#39 /home/marco/projects/private/filament-email-demo/vendor/symfony/console/Application.php(1049): Illuminate\\Console\\Command->run()
+#40 /home/marco/projects/private/filament-email-demo/vendor/symfony/console/Application.php(318): Symfony\\Component\\Console\\Application->doRunCommand()
+#41 /home/marco/projects/private/filament-email-demo/vendor/symfony/console/Application.php(169): Symfony\\Component\\Console\\Application->doRun()
+#42 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Symfony\\Component\\Console\\Application->run()
+#43 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1183): Illuminate\\Foundation\\Console\\Kernel->handle()
+#44 /home/marco/projects/private/filament-email-demo/artisan(13): Illuminate\\Foundation\\Application->handleCommand()
+#45 {main}
+"} 
+[2024-04-29 17:42:26] production.ERROR: could not find driver (Connection: sqlite, SQL: select name from sqlite_master where type = 'table' and name not like 'sqlite_%' order by name) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 0): could not find driver (Connection: sqlite, SQL: select name from sqlite_master where type = 'table' and name not like 'sqlite_%' order by name) at /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php:813)
+[stacktrace]
+#0 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(767): Illuminate\\Database\\Connection->runQueryCallback()
+#1 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(398): Illuminate\\Database\\Connection->run()
+#2 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(385): Illuminate\\Database\\Connection->select()
+#3 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Schema/SQLiteBuilder.php(51): Illuminate\\Database\\Connection->selectFromWriteConnection()
+#4 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(147): Illuminate\\Database\\Schema\\SQLiteBuilder->getTables()
+#5 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(184): Illuminate\\Database\\Schema\\Builder->hasTable()
+#6 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(689): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->repositoryExists()
+#7 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(164): Illuminate\\Database\\Migrations\\Migrator->repositoryExists()
+#8 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Support/helpers.php(300): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#9 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(164): retry()
+#10 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(140): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->repositoryExists()
+#11 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(110): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->prepareDatabase()
+#12 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(622): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#13 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(109): Illuminate\\Database\\Migrations\\Migrator->usingConnection()
+#14 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(88): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->runMigrations()
+#15 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#16 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#17 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#18 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#19 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#20 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Console/Command.php(212): Illuminate\\Container\\Container->call()
+#21 /home/marco/projects/private/filament-email-demo/vendor/symfony/console/Command/Command.php(279): Illuminate\\Console\\Command->execute()
+#22 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Console/Command.php(181): Symfony\\Component\\Console\\Command\\Command->run()
+#23 /home/marco/projects/private/filament-email-demo/vendor/symfony/console/Application.php(1049): Illuminate\\Console\\Command->run()
+#24 /home/marco/projects/private/filament-email-demo/vendor/symfony/console/Application.php(318): Symfony\\Component\\Console\\Application->doRunCommand()
+#25 /home/marco/projects/private/filament-email-demo/vendor/symfony/console/Application.php(169): Symfony\\Component\\Console\\Application->doRun()
+#26 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Symfony\\Component\\Console\\Application->run()
+#27 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1183): Illuminate\\Foundation\\Console\\Kernel->handle()
+#28 /home/marco/projects/private/filament-email-demo/artisan(13): Illuminate\\Foundation\\Application->handleCommand()
+#29 {main}
+
+[previous exception] [object] (PDOException(code: 0): could not find driver at /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:65)
+[stacktrace]
+#0 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(65): PDO->__construct()
+#1 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(44): Illuminate\\Database\\Connectors\\Connector->createPdoConnection()
+#2 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Connectors/SQLiteConnector.php(37): Illuminate\\Database\\Connectors\\Connector->createConnection()
+#3 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(222): Illuminate\\Database\\Connectors\\SQLiteConnector->connect()
+#4 [internal function]: Illuminate\\Database\\Connectors\\ConnectionFactory->Illuminate\\Database\\Connectors\\{closure}()
+#5 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(1219): call_user_func()
+#6 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(512): Illuminate\\Database\\Connection->getPdo()
+#7 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(407): Illuminate\\Database\\Connection->getPdoForSelect()
+#8 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(800): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}()
+#9 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(767): Illuminate\\Database\\Connection->runQueryCallback()
+#10 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(398): Illuminate\\Database\\Connection->run()
+#11 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(385): Illuminate\\Database\\Connection->select()
+#12 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Schema/SQLiteBuilder.php(51): Illuminate\\Database\\Connection->selectFromWriteConnection()
+#13 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(147): Illuminate\\Database\\Schema\\SQLiteBuilder->getTables()
+#14 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(184): Illuminate\\Database\\Schema\\Builder->hasTable()
+#15 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(689): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->repositoryExists()
+#16 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(164): Illuminate\\Database\\Migrations\\Migrator->repositoryExists()
+#17 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Support/helpers.php(300): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#18 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(164): retry()
+#19 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(140): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->repositoryExists()
+#20 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(110): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->prepareDatabase()
+#21 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(622): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#22 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(109): Illuminate\\Database\\Migrations\\Migrator->usingConnection()
+#23 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(88): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->runMigrations()
+#24 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#25 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#26 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#27 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#28 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#29 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Console/Command.php(212): Illuminate\\Container\\Container->call()
+#30 /home/marco/projects/private/filament-email-demo/vendor/symfony/console/Command/Command.php(279): Illuminate\\Console\\Command->execute()
+#31 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Console/Command.php(181): Symfony\\Component\\Console\\Command\\Command->run()
+#32 /home/marco/projects/private/filament-email-demo/vendor/symfony/console/Application.php(1049): Illuminate\\Console\\Command->run()
+#33 /home/marco/projects/private/filament-email-demo/vendor/symfony/console/Application.php(318): Symfony\\Component\\Console\\Application->doRunCommand()
+#34 /home/marco/projects/private/filament-email-demo/vendor/symfony/console/Application.php(169): Symfony\\Component\\Console\\Application->doRun()
+#35 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Symfony\\Component\\Console\\Application->run()
+#36 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1183): Illuminate\\Foundation\\Console\\Kernel->handle()
+#37 /home/marco/projects/private/filament-email-demo/artisan(13): Illuminate\\Foundation\\Application->handleCommand()
+#38 {main}
+"} 
+[2024-04-29 17:43:05] production.ERROR: No application encryption key has been specified. {"exception":"[object] (Illuminate\\Encryption\\MissingAppKeyException(code: 0): No application encryption key has been specified. at /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Encryption/EncryptionServiceProvider.php:83)
+[stacktrace]
+#0 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Support/helpers.php(359): Illuminate\\Encryption\\EncryptionServiceProvider->Illuminate\\Encryption\\{closure}()
+#1 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Encryption/EncryptionServiceProvider.php(81): tap()
+#2 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Encryption/EncryptionServiceProvider.php(64): Illuminate\\Encryption\\EncryptionServiceProvider->key()
+#3 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Encryption/EncryptionServiceProvider.php(32): Illuminate\\Encryption\\EncryptionServiceProvider->parseKey()
+#4 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(900): Illuminate\\Encryption\\EncryptionServiceProvider->Illuminate\\Encryption\\{closure}()
+#5 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(787): Illuminate\\Container\\Container->build()
+#6 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1026): Illuminate\\Container\\Container->resolve()
+#7 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(723): Illuminate\\Foundation\\Application->resolve()
+#8 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1011): Illuminate\\Container\\Container->make()
+#9 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(1058): Illuminate\\Foundation\\Application->make()
+#10 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(974): Illuminate\\Container\\Container->resolveClass()
+#11 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(935): Illuminate\\Container\\Container->resolveDependencies()
+#12 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(787): Illuminate\\Container\\Container->build()
+#13 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1026): Illuminate\\Container\\Container->resolve()
+#14 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(723): Illuminate\\Foundation\\Application->resolve()
+#15 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1011): Illuminate\\Container\\Container->make()
+#16 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(172): Illuminate\\Foundation\\Application->make()
+#17 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#18 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Routing/Router.php(805): Illuminate\\Pipeline\\Pipeline->then()
+#19 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Routing/Router.php(784): Illuminate\\Routing\\Router->runRouteWithinStack()
+#20 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Routing/Router.php(748): Illuminate\\Routing\\Router->runRoute()
+#21 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Routing/Router.php(737): Illuminate\\Routing\\Router->dispatchToRoute()
+#22 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate\\Routing\\Router->dispatch()
+#23 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(144): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
+#24 /home/marco/projects/private/filament-email-demo/vendor/livewire/livewire/src/Features/SupportDisablingBackButtonCache/DisableBackButtonCacheMiddleware.php(19): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#25 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Livewire\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware->handle()
+#26 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#27 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#28 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
+#29 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#30 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#31 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
+#32 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#33 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Http\\Middleware\\ValidatePostSize->handle()
+#34 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(110): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#35 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
+#36 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#37 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Http\\Middleware\\HandleCors->handle()
+#38 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#39 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Http\\Middleware\\TrustProxies->handle()
+#40 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#41 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then()
+#42 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
+#43 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1168): Illuminate\\Foundation\\Http\\Kernel->handle()
+#44 /home/marco/projects/private/filament-email-demo/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
+#45 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
+#46 {main}
+"} 
+[2024-04-29 17:43:05] production.ERROR: No application encryption key has been specified. {"exception":"[object] (Illuminate\\Encryption\\MissingAppKeyException(code: 0): No application encryption key has been specified. at /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Encryption/EncryptionServiceProvider.php:83)
+[stacktrace]
+#0 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Support/helpers.php(359): Illuminate\\Encryption\\EncryptionServiceProvider->Illuminate\\Encryption\\{closure}()
+#1 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Encryption/EncryptionServiceProvider.php(81): tap()
+#2 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Encryption/EncryptionServiceProvider.php(64): Illuminate\\Encryption\\EncryptionServiceProvider->key()
+#3 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Encryption/EncryptionServiceProvider.php(32): Illuminate\\Encryption\\EncryptionServiceProvider->parseKey()
+#4 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(900): Illuminate\\Encryption\\EncryptionServiceProvider->Illuminate\\Encryption\\{closure}()
+#5 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(787): Illuminate\\Container\\Container->build()
+#6 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1026): Illuminate\\Container\\Container->resolve()
+#7 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(723): Illuminate\\Foundation\\Application->resolve()
+#8 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1011): Illuminate\\Container\\Container->make()
+#9 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(1058): Illuminate\\Foundation\\Application->make()
+#10 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(974): Illuminate\\Container\\Container->resolveClass()
+#11 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(935): Illuminate\\Container\\Container->resolveDependencies()
+#12 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(787): Illuminate\\Container\\Container->build()
+#13 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1026): Illuminate\\Container\\Container->resolve()
+#14 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(723): Illuminate\\Foundation\\Application->resolve()
+#15 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1011): Illuminate\\Container\\Container->make()
+#16 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(255): Illuminate\\Foundation\\Application->make()
+#17 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(213): Illuminate\\Foundation\\Http\\Kernel->terminateMiddleware()
+#18 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1170): Illuminate\\Foundation\\Http\\Kernel->terminate()
+#19 /home/marco/projects/private/filament-email-demo/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
+#20 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
+#21 {main}
+"} 
+[2024-04-29 17:43:26] production.ERROR: No application encryption key has been specified. {"exception":"[object] (Illuminate\\Encryption\\MissingAppKeyException(code: 0): No application encryption key has been specified. at /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Encryption/EncryptionServiceProvider.php:83)
+[stacktrace]
+#0 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Support/helpers.php(359): Illuminate\\Encryption\\EncryptionServiceProvider->Illuminate\\Encryption\\{closure}()
+#1 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Encryption/EncryptionServiceProvider.php(81): tap()
+#2 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Encryption/EncryptionServiceProvider.php(64): Illuminate\\Encryption\\EncryptionServiceProvider->key()
+#3 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Encryption/EncryptionServiceProvider.php(32): Illuminate\\Encryption\\EncryptionServiceProvider->parseKey()
+#4 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(900): Illuminate\\Encryption\\EncryptionServiceProvider->Illuminate\\Encryption\\{closure}()
+#5 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(787): Illuminate\\Container\\Container->build()
+#6 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1026): Illuminate\\Container\\Container->resolve()
+#7 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(723): Illuminate\\Foundation\\Application->resolve()
+#8 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1011): Illuminate\\Container\\Container->make()
+#9 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(1058): Illuminate\\Foundation\\Application->make()
+#10 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(974): Illuminate\\Container\\Container->resolveClass()
+#11 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(935): Illuminate\\Container\\Container->resolveDependencies()
+#12 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(787): Illuminate\\Container\\Container->build()
+#13 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1026): Illuminate\\Container\\Container->resolve()
+#14 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(723): Illuminate\\Foundation\\Application->resolve()
+#15 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1011): Illuminate\\Container\\Container->make()
+#16 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(172): Illuminate\\Foundation\\Application->make()
+#17 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#18 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Routing/Router.php(805): Illuminate\\Pipeline\\Pipeline->then()
+#19 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Routing/Router.php(784): Illuminate\\Routing\\Router->runRouteWithinStack()
+#20 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Routing/Router.php(748): Illuminate\\Routing\\Router->runRoute()
+#21 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Routing/Router.php(737): Illuminate\\Routing\\Router->dispatchToRoute()
+#22 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate\\Routing\\Router->dispatch()
+#23 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(144): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
+#24 /home/marco/projects/private/filament-email-demo/vendor/livewire/livewire/src/Features/SupportDisablingBackButtonCache/DisableBackButtonCacheMiddleware.php(19): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#25 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Livewire\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware->handle()
+#26 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#27 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#28 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
+#29 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#30 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#31 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
+#32 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#33 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Http\\Middleware\\ValidatePostSize->handle()
+#34 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(110): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#35 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
+#36 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#37 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Http\\Middleware\\HandleCors->handle()
+#38 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#39 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Http\\Middleware\\TrustProxies->handle()
+#40 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#41 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then()
+#42 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
+#43 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1168): Illuminate\\Foundation\\Http\\Kernel->handle()
+#44 /home/marco/projects/private/filament-email-demo/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
+#45 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
+#46 {main}
+"} 
+[2024-04-29 17:43:26] production.ERROR: No application encryption key has been specified. {"exception":"[object] (Illuminate\\Encryption\\MissingAppKeyException(code: 0): No application encryption key has been specified. at /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Encryption/EncryptionServiceProvider.php:83)
+[stacktrace]
+#0 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Support/helpers.php(359): Illuminate\\Encryption\\EncryptionServiceProvider->Illuminate\\Encryption\\{closure}()
+#1 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Encryption/EncryptionServiceProvider.php(81): tap()
+#2 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Encryption/EncryptionServiceProvider.php(64): Illuminate\\Encryption\\EncryptionServiceProvider->key()
+#3 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Encryption/EncryptionServiceProvider.php(32): Illuminate\\Encryption\\EncryptionServiceProvider->parseKey()
+#4 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(900): Illuminate\\Encryption\\EncryptionServiceProvider->Illuminate\\Encryption\\{closure}()
+#5 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(787): Illuminate\\Container\\Container->build()
+#6 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1026): Illuminate\\Container\\Container->resolve()
+#7 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(723): Illuminate\\Foundation\\Application->resolve()
+#8 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1011): Illuminate\\Container\\Container->make()
+#9 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(1058): Illuminate\\Foundation\\Application->make()
+#10 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(974): Illuminate\\Container\\Container->resolveClass()
+#11 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(935): Illuminate\\Container\\Container->resolveDependencies()
+#12 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(787): Illuminate\\Container\\Container->build()
+#13 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1026): Illuminate\\Container\\Container->resolve()
+#14 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(723): Illuminate\\Foundation\\Application->resolve()
+#15 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1011): Illuminate\\Container\\Container->make()
+#16 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(255): Illuminate\\Foundation\\Application->make()
+#17 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(213): Illuminate\\Foundation\\Http\\Kernel->terminateMiddleware()
+#18 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1170): Illuminate\\Foundation\\Http\\Kernel->terminate()
+#19 /home/marco/projects/private/filament-email-demo/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
+#20 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
+#21 {main}
+"} 
+[2024-04-29 17:43:29] production.ERROR: No application encryption key has been specified. {"exception":"[object] (Illuminate\\Encryption\\MissingAppKeyException(code: 0): No application encryption key has been specified. at /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Encryption/EncryptionServiceProvider.php:83)
+[stacktrace]
+#0 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Support/helpers.php(359): Illuminate\\Encryption\\EncryptionServiceProvider->Illuminate\\Encryption\\{closure}()
+#1 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Encryption/EncryptionServiceProvider.php(81): tap()
+#2 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Encryption/EncryptionServiceProvider.php(64): Illuminate\\Encryption\\EncryptionServiceProvider->key()
+#3 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Encryption/EncryptionServiceProvider.php(32): Illuminate\\Encryption\\EncryptionServiceProvider->parseKey()
+#4 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(900): Illuminate\\Encryption\\EncryptionServiceProvider->Illuminate\\Encryption\\{closure}()
+#5 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(787): Illuminate\\Container\\Container->build()
+#6 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1026): Illuminate\\Container\\Container->resolve()
+#7 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(723): Illuminate\\Foundation\\Application->resolve()
+#8 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1011): Illuminate\\Container\\Container->make()
+#9 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(1058): Illuminate\\Foundation\\Application->make()
+#10 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(974): Illuminate\\Container\\Container->resolveClass()
+#11 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(935): Illuminate\\Container\\Container->resolveDependencies()
+#12 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(787): Illuminate\\Container\\Container->build()
+#13 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1026): Illuminate\\Container\\Container->resolve()
+#14 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(723): Illuminate\\Foundation\\Application->resolve()
+#15 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1011): Illuminate\\Container\\Container->make()
+#16 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(172): Illuminate\\Foundation\\Application->make()
+#17 /home/marco/projects/private/filament-email-demo/vendor/filament/filament/src/Http/Middleware/SetUpPanel.php(19): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#18 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Filament\\Http\\Middleware\\SetUpPanel->handle()
+#19 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#20 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Routing/Router.php(805): Illuminate\\Pipeline\\Pipeline->then()
+#21 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Routing/Router.php(784): Illuminate\\Routing\\Router->runRouteWithinStack()
+#22 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Routing/Router.php(748): Illuminate\\Routing\\Router->runRoute()
+#23 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Routing/Router.php(737): Illuminate\\Routing\\Router->dispatchToRoute()
+#24 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate\\Routing\\Router->dispatch()
+#25 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(144): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
+#26 /home/marco/projects/private/filament-email-demo/vendor/livewire/livewire/src/Features/SupportDisablingBackButtonCache/DisableBackButtonCacheMiddleware.php(19): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#27 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Livewire\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware->handle()
+#28 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#29 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#30 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
+#31 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#32 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#33 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
+#34 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#35 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Http\\Middleware\\ValidatePostSize->handle()
+#36 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(110): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#37 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
+#38 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#39 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Http\\Middleware\\HandleCors->handle()
+#40 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#41 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Http\\Middleware\\TrustProxies->handle()
+#42 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#43 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then()
+#44 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
+#45 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1168): Illuminate\\Foundation\\Http\\Kernel->handle()
+#46 /home/marco/projects/private/filament-email-demo/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
+#47 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
+#48 {main}
+"} 
+[2024-04-29 17:43:29] production.ERROR: No application encryption key has been specified. {"exception":"[object] (Illuminate\\Encryption\\MissingAppKeyException(code: 0): No application encryption key has been specified. at /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Encryption/EncryptionServiceProvider.php:83)
+[stacktrace]
+#0 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Support/helpers.php(359): Illuminate\\Encryption\\EncryptionServiceProvider->Illuminate\\Encryption\\{closure}()
+#1 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Encryption/EncryptionServiceProvider.php(81): tap()
+#2 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Encryption/EncryptionServiceProvider.php(64): Illuminate\\Encryption\\EncryptionServiceProvider->key()
+#3 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Encryption/EncryptionServiceProvider.php(32): Illuminate\\Encryption\\EncryptionServiceProvider->parseKey()
+#4 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(900): Illuminate\\Encryption\\EncryptionServiceProvider->Illuminate\\Encryption\\{closure}()
+#5 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(787): Illuminate\\Container\\Container->build()
+#6 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1026): Illuminate\\Container\\Container->resolve()
+#7 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(723): Illuminate\\Foundation\\Application->resolve()
+#8 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1011): Illuminate\\Container\\Container->make()
+#9 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(1058): Illuminate\\Foundation\\Application->make()
+#10 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(974): Illuminate\\Container\\Container->resolveClass()
+#11 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(935): Illuminate\\Container\\Container->resolveDependencies()
+#12 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(787): Illuminate\\Container\\Container->build()
+#13 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1026): Illuminate\\Container\\Container->resolve()
+#14 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(723): Illuminate\\Foundation\\Application->resolve()
+#15 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1011): Illuminate\\Container\\Container->make()
+#16 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(255): Illuminate\\Foundation\\Application->make()
+#17 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(213): Illuminate\\Foundation\\Http\\Kernel->terminateMiddleware()
+#18 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1170): Illuminate\\Foundation\\Http\\Kernel->terminate()
+#19 /home/marco/projects/private/filament-email-demo/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
+#20 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
+#21 {main}
+"} 
+[2024-04-29 17:43:53] production.ERROR: No application encryption key has been specified. {"exception":"[object] (Illuminate\\Encryption\\MissingAppKeyException(code: 0): No application encryption key has been specified. at /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Encryption/EncryptionServiceProvider.php:83)
+[stacktrace]
+#0 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Support/helpers.php(359): Illuminate\\Encryption\\EncryptionServiceProvider->Illuminate\\Encryption\\{closure}()
+#1 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Encryption/EncryptionServiceProvider.php(81): tap()
+#2 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Encryption/EncryptionServiceProvider.php(64): Illuminate\\Encryption\\EncryptionServiceProvider->key()
+#3 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Encryption/EncryptionServiceProvider.php(32): Illuminate\\Encryption\\EncryptionServiceProvider->parseKey()
+#4 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(900): Illuminate\\Encryption\\EncryptionServiceProvider->Illuminate\\Encryption\\{closure}()
+#5 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(787): Illuminate\\Container\\Container->build()
+#6 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1026): Illuminate\\Container\\Container->resolve()
+#7 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(723): Illuminate\\Foundation\\Application->resolve()
+#8 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1011): Illuminate\\Container\\Container->make()
+#9 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(1058): Illuminate\\Foundation\\Application->make()
+#10 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(974): Illuminate\\Container\\Container->resolveClass()
+#11 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(935): Illuminate\\Container\\Container->resolveDependencies()
+#12 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(787): Illuminate\\Container\\Container->build()
+#13 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1026): Illuminate\\Container\\Container->resolve()
+#14 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(723): Illuminate\\Foundation\\Application->resolve()
+#15 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1011): Illuminate\\Container\\Container->make()
+#16 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(172): Illuminate\\Foundation\\Application->make()
+#17 /home/marco/projects/private/filament-email-demo/vendor/filament/filament/src/Http/Middleware/SetUpPanel.php(19): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#18 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Filament\\Http\\Middleware\\SetUpPanel->handle()
+#19 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#20 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Routing/Router.php(805): Illuminate\\Pipeline\\Pipeline->then()
+#21 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Routing/Router.php(784): Illuminate\\Routing\\Router->runRouteWithinStack()
+#22 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Routing/Router.php(748): Illuminate\\Routing\\Router->runRoute()
+#23 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Routing/Router.php(737): Illuminate\\Routing\\Router->dispatchToRoute()
+#24 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate\\Routing\\Router->dispatch()
+#25 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(144): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
+#26 /home/marco/projects/private/filament-email-demo/vendor/livewire/livewire/src/Features/SupportDisablingBackButtonCache/DisableBackButtonCacheMiddleware.php(19): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#27 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Livewire\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware->handle()
+#28 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#29 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#30 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
+#31 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#32 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#33 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
+#34 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#35 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Http\\Middleware\\ValidatePostSize->handle()
+#36 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(110): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#37 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
+#38 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#39 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Http\\Middleware\\HandleCors->handle()
+#40 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#41 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Http\\Middleware\\TrustProxies->handle()
+#42 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#43 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then()
+#44 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
+#45 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1168): Illuminate\\Foundation\\Http\\Kernel->handle()
+#46 /home/marco/projects/private/filament-email-demo/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
+#47 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
+#48 {main}
+"} 
+[2024-04-29 17:43:53] production.ERROR: No application encryption key has been specified. {"exception":"[object] (Illuminate\\Encryption\\MissingAppKeyException(code: 0): No application encryption key has been specified. at /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Encryption/EncryptionServiceProvider.php:83)
+[stacktrace]
+#0 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Support/helpers.php(359): Illuminate\\Encryption\\EncryptionServiceProvider->Illuminate\\Encryption\\{closure}()
+#1 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Encryption/EncryptionServiceProvider.php(81): tap()
+#2 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Encryption/EncryptionServiceProvider.php(64): Illuminate\\Encryption\\EncryptionServiceProvider->key()
+#3 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Encryption/EncryptionServiceProvider.php(32): Illuminate\\Encryption\\EncryptionServiceProvider->parseKey()
+#4 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(900): Illuminate\\Encryption\\EncryptionServiceProvider->Illuminate\\Encryption\\{closure}()
+#5 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(787): Illuminate\\Container\\Container->build()
+#6 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1026): Illuminate\\Container\\Container->resolve()
+#7 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(723): Illuminate\\Foundation\\Application->resolve()
+#8 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1011): Illuminate\\Container\\Container->make()
+#9 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(1058): Illuminate\\Foundation\\Application->make()
+#10 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(974): Illuminate\\Container\\Container->resolveClass()
+#11 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(935): Illuminate\\Container\\Container->resolveDependencies()
+#12 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(787): Illuminate\\Container\\Container->build()
+#13 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1026): Illuminate\\Container\\Container->resolve()
+#14 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(723): Illuminate\\Foundation\\Application->resolve()
+#15 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1011): Illuminate\\Container\\Container->make()
+#16 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(255): Illuminate\\Foundation\\Application->make()
+#17 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(213): Illuminate\\Foundation\\Http\\Kernel->terminateMiddleware()
+#18 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1170): Illuminate\\Foundation\\Http\\Kernel->terminate()
+#19 /home/marco/projects/private/filament-email-demo/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
+#20 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
+#21 {main}
+"} 
+[2024-04-29 17:44:05] production.ERROR: file_get_contents(/home/marco/projects/private/filament-email-demo/.env): Failed to open stream: No such file or directory {"exception":"[object] (ErrorException(code: 0): file_get_contents(/home/marco/projects/private/filament-email-demo/.env): Failed to open stream: No such file or directory at /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Console/KeyGenerateCommand.php:100)
+[stacktrace]
+#0 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(256): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError()
+#1 [internal function]: Illuminate\\Foundation\\Bootstrap\\HandleExceptions->Illuminate\\Foundation\\Bootstrap\\{closure}()
+#2 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Console/KeyGenerateCommand.php(100): file_get_contents()
+#3 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Console/KeyGenerateCommand.php(82): Illuminate\\Foundation\\Console\\KeyGenerateCommand->writeNewEnvironmentFileWith()
+#4 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Console/KeyGenerateCommand.php(47): Illuminate\\Foundation\\Console\\KeyGenerateCommand->setKeyInEnvironmentFile()
+#5 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Foundation\\Console\\KeyGenerateCommand->handle()
+#6 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#7 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#8 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#9 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#10 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Console/Command.php(212): Illuminate\\Container\\Container->call()
+#11 /home/marco/projects/private/filament-email-demo/vendor/symfony/console/Command/Command.php(279): Illuminate\\Console\\Command->execute()
+#12 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Console/Command.php(181): Symfony\\Component\\Console\\Command\\Command->run()
+#13 /home/marco/projects/private/filament-email-demo/vendor/symfony/console/Application.php(1049): Illuminate\\Console\\Command->run()
+#14 /home/marco/projects/private/filament-email-demo/vendor/symfony/console/Application.php(318): Symfony\\Component\\Console\\Application->doRunCommand()
+#15 /home/marco/projects/private/filament-email-demo/vendor/symfony/console/Application.php(169): Symfony\\Component\\Console\\Application->doRun()
+#16 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Symfony\\Component\\Console\\Application->run()
+#17 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1183): Illuminate\\Foundation\\Console\\Kernel->handle()
+#18 /home/marco/projects/private/filament-email-demo/artisan(13): Illuminate\\Foundation\\Application->handleCommand()
+#19 {main}
+"} 
+[2024-04-29 17:45:58] local.ERROR: SQLSTATE[23000]: Integrity constraint violation: 19 UNIQUE constraint failed: users.email (Connection: sqlite, SQL: insert into "users" ("name", "email", "password", "updated_at", "created_at") values (User, user@example.com, $2y$12$avJd1S0vcPdf96uW5k0lW.QFIOEQjl3PM9Z/oAuV6awLvXx9O9y6y, 2024-04-29 17:45:58, 2024-04-29 17:45:58)) {"exception":"[object] (Illuminate\\Database\\UniqueConstraintViolationException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 19 UNIQUE constraint failed: users.email (Connection: sqlite, SQL: insert into \"users\" (\"name\", \"email\", \"password\", \"updated_at\", \"created_at\") values (User, user@example.com, $2y$12$avJd1S0vcPdf96uW5k0lW.QFIOEQjl3PM9Z/oAuV6awLvXx9O9y6y, 2024-04-29 17:45:58, 2024-04-29 17:45:58)) at /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php:808)
+[stacktrace]
+#0 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(767): Illuminate\\Database\\Connection->runQueryCallback()
+#1 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(560): Illuminate\\Database\\Connection->run()
+#2 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(524): Illuminate\\Database\\Connection->statement()
+#3 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Query/Processors/Processor.php(32): Illuminate\\Database\\Connection->insert()
+#4 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3600): Illuminate\\Database\\Query\\Processors\\Processor->processInsertGetId()
+#5 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(2026): Illuminate\\Database\\Query\\Builder->insertGetId()
+#6 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1338): Illuminate\\Database\\Eloquent\\Builder->__call()
+#7 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1303): Illuminate\\Database\\Eloquent\\Model->insertAndSetId()
+#8 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1142): Illuminate\\Database\\Eloquent\\Model->performInsert()
+#9 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(1069): Illuminate\\Database\\Eloquent\\Model->save()
+#10 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Support/helpers.php(359): Illuminate\\Database\\Eloquent\\Builder->Illuminate\\Database\\Eloquent\\{closure}()
+#11 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(1068): tap()
+#12 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Support/Traits/ForwardsCalls.php(23): Illuminate\\Database\\Eloquent\\Builder->create()
+#13 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2340): Illuminate\\Database\\Eloquent\\Model->forwardCallTo()
+#14 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2352): Illuminate\\Database\\Eloquent\\Model->__call()
+#15 /home/marco/projects/private/filament-email-demo/database/seeders/DatabaseSeeder.php(25): Illuminate\\Database\\Eloquent\\Model::__callStatic()
+#16 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Database\\Seeders\\DatabaseSeeder->run()
+#17 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#18 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#19 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#20 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#21 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Seeder.php(184): Illuminate\\Container\\Container->call()
+#22 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Seeder.php(193): Illuminate\\Database\\Seeder->Illuminate\\Database\\{closure}()
+#23 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Console/Seeds/SeedCommand.php(70): Illuminate\\Database\\Seeder->__invoke()
+#24 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Concerns/GuardsAttributes.php(155): Illuminate\\Database\\Console\\Seeds\\SeedCommand->Illuminate\\Database\\Console\\Seeds\\{closure}()
+#25 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Console/Seeds/SeedCommand.php(69): Illuminate\\Database\\Eloquent\\Model::unguarded()
+#26 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Database\\Console\\Seeds\\SeedCommand->handle()
+#27 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#28 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#29 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#30 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#31 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Console/Command.php(212): Illuminate\\Container\\Container->call()
+#32 /home/marco/projects/private/filament-email-demo/vendor/symfony/console/Command/Command.php(279): Illuminate\\Console\\Command->execute()
+#33 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Console/Command.php(181): Symfony\\Component\\Console\\Command\\Command->run()
+#34 /home/marco/projects/private/filament-email-demo/vendor/symfony/console/Application.php(1049): Illuminate\\Console\\Command->run()
+#35 /home/marco/projects/private/filament-email-demo/vendor/symfony/console/Application.php(318): Symfony\\Component\\Console\\Application->doRunCommand()
+#36 /home/marco/projects/private/filament-email-demo/vendor/symfony/console/Application.php(169): Symfony\\Component\\Console\\Application->doRun()
+#37 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Symfony\\Component\\Console\\Application->run()
+#38 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1183): Illuminate\\Foundation\\Console\\Kernel->handle()
+#39 /home/marco/projects/private/filament-email-demo/artisan(13): Illuminate\\Foundation\\Application->handleCommand()
+#40 {main}
+
+[previous exception] [object] (PDOException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 19 UNIQUE constraint failed: users.email at /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php:571)
+[stacktrace]
+#0 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(571): PDOStatement->execute()
+#1 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(800): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}()
+#2 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(767): Illuminate\\Database\\Connection->runQueryCallback()
+#3 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(560): Illuminate\\Database\\Connection->run()
+#4 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(524): Illuminate\\Database\\Connection->statement()
+#5 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Query/Processors/Processor.php(32): Illuminate\\Database\\Connection->insert()
+#6 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3600): Illuminate\\Database\\Query\\Processors\\Processor->processInsertGetId()
+#7 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(2026): Illuminate\\Database\\Query\\Builder->insertGetId()
+#8 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1338): Illuminate\\Database\\Eloquent\\Builder->__call()
+#9 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1303): Illuminate\\Database\\Eloquent\\Model->insertAndSetId()
+#10 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1142): Illuminate\\Database\\Eloquent\\Model->performInsert()
+#11 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(1069): Illuminate\\Database\\Eloquent\\Model->save()
+#12 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Support/helpers.php(359): Illuminate\\Database\\Eloquent\\Builder->Illuminate\\Database\\Eloquent\\{closure}()
+#13 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(1068): tap()
+#14 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Support/Traits/ForwardsCalls.php(23): Illuminate\\Database\\Eloquent\\Builder->create()
+#15 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2340): Illuminate\\Database\\Eloquent\\Model->forwardCallTo()
+#16 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2352): Illuminate\\Database\\Eloquent\\Model->__call()
+#17 /home/marco/projects/private/filament-email-demo/database/seeders/DatabaseSeeder.php(25): Illuminate\\Database\\Eloquent\\Model::__callStatic()
+#18 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Database\\Seeders\\DatabaseSeeder->run()
+#19 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#20 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#21 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#22 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#23 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Seeder.php(184): Illuminate\\Container\\Container->call()
+#24 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Seeder.php(193): Illuminate\\Database\\Seeder->Illuminate\\Database\\{closure}()
+#25 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Console/Seeds/SeedCommand.php(70): Illuminate\\Database\\Seeder->__invoke()
+#26 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Concerns/GuardsAttributes.php(155): Illuminate\\Database\\Console\\Seeds\\SeedCommand->Illuminate\\Database\\Console\\Seeds\\{closure}()
+#27 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Console/Seeds/SeedCommand.php(69): Illuminate\\Database\\Eloquent\\Model::unguarded()
+#28 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Database\\Console\\Seeds\\SeedCommand->handle()
+#29 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#30 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#31 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#32 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#33 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Console/Command.php(212): Illuminate\\Container\\Container->call()
+#34 /home/marco/projects/private/filament-email-demo/vendor/symfony/console/Command/Command.php(279): Illuminate\\Console\\Command->execute()
+#35 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Console/Command.php(181): Symfony\\Component\\Console\\Command\\Command->run()
+#36 /home/marco/projects/private/filament-email-demo/vendor/symfony/console/Application.php(1049): Illuminate\\Console\\Command->run()
+#37 /home/marco/projects/private/filament-email-demo/vendor/symfony/console/Application.php(318): Symfony\\Component\\Console\\Application->doRunCommand()
+#38 /home/marco/projects/private/filament-email-demo/vendor/symfony/console/Application.php(169): Symfony\\Component\\Console\\Application->doRun()
+#39 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Symfony\\Component\\Console\\Application->run()
+#40 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1183): Illuminate\\Foundation\\Console\\Kernel->handle()
+#41 /home/marco/projects/private/filament-email-demo/artisan(13): Illuminate\\Foundation\\Application->handleCommand()
+#42 {main}
+"} 
+[2024-04-29 17:46:20] local.ERROR: SQLSTATE[23000]: Integrity constraint violation: 19 UNIQUE constraint failed: users.email (Connection: sqlite, SQL: insert into "users" ("name", "email", "password", "updated_at", "created_at") values (User, user@example.com, $2y$12$Uwb.4kX0w9JU9Bpr5UjSdO.4fVipHxrRysYwE1lvzlBW2psgI6MH., 2024-04-29 17:46:20, 2024-04-29 17:46:20)) {"exception":"[object] (Illuminate\\Database\\UniqueConstraintViolationException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 19 UNIQUE constraint failed: users.email (Connection: sqlite, SQL: insert into \"users\" (\"name\", \"email\", \"password\", \"updated_at\", \"created_at\") values (User, user@example.com, $2y$12$Uwb.4kX0w9JU9Bpr5UjSdO.4fVipHxrRysYwE1lvzlBW2psgI6MH., 2024-04-29 17:46:20, 2024-04-29 17:46:20)) at /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php:808)
+[stacktrace]
+#0 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(767): Illuminate\\Database\\Connection->runQueryCallback()
+#1 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(560): Illuminate\\Database\\Connection->run()
+#2 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(524): Illuminate\\Database\\Connection->statement()
+#3 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Query/Processors/Processor.php(32): Illuminate\\Database\\Connection->insert()
+#4 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3600): Illuminate\\Database\\Query\\Processors\\Processor->processInsertGetId()
+#5 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(2026): Illuminate\\Database\\Query\\Builder->insertGetId()
+#6 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1338): Illuminate\\Database\\Eloquent\\Builder->__call()
+#7 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1303): Illuminate\\Database\\Eloquent\\Model->insertAndSetId()
+#8 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1142): Illuminate\\Database\\Eloquent\\Model->performInsert()
+#9 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(1069): Illuminate\\Database\\Eloquent\\Model->save()
+#10 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Support/helpers.php(359): Illuminate\\Database\\Eloquent\\Builder->Illuminate\\Database\\Eloquent\\{closure}()
+#11 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(1068): tap()
+#12 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Support/Traits/ForwardsCalls.php(23): Illuminate\\Database\\Eloquent\\Builder->create()
+#13 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2340): Illuminate\\Database\\Eloquent\\Model->forwardCallTo()
+#14 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2352): Illuminate\\Database\\Eloquent\\Model->__call()
+#15 /home/marco/projects/private/filament-email-demo/database/seeders/DatabaseSeeder.php(25): Illuminate\\Database\\Eloquent\\Model::__callStatic()
+#16 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Database\\Seeders\\DatabaseSeeder->run()
+#17 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#18 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#19 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#20 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#21 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Seeder.php(184): Illuminate\\Container\\Container->call()
+#22 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Seeder.php(193): Illuminate\\Database\\Seeder->Illuminate\\Database\\{closure}()
+#23 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Console/Seeds/SeedCommand.php(70): Illuminate\\Database\\Seeder->__invoke()
+#24 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Concerns/GuardsAttributes.php(155): Illuminate\\Database\\Console\\Seeds\\SeedCommand->Illuminate\\Database\\Console\\Seeds\\{closure}()
+#25 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Console/Seeds/SeedCommand.php(69): Illuminate\\Database\\Eloquent\\Model::unguarded()
+#26 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Database\\Console\\Seeds\\SeedCommand->handle()
+#27 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#28 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#29 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#30 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#31 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Console/Command.php(212): Illuminate\\Container\\Container->call()
+#32 /home/marco/projects/private/filament-email-demo/vendor/symfony/console/Command/Command.php(279): Illuminate\\Console\\Command->execute()
+#33 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Console/Command.php(181): Symfony\\Component\\Console\\Command\\Command->run()
+#34 /home/marco/projects/private/filament-email-demo/vendor/symfony/console/Application.php(1049): Illuminate\\Console\\Command->run()
+#35 /home/marco/projects/private/filament-email-demo/vendor/symfony/console/Application.php(318): Symfony\\Component\\Console\\Application->doRunCommand()
+#36 /home/marco/projects/private/filament-email-demo/vendor/symfony/console/Application.php(169): Symfony\\Component\\Console\\Application->doRun()
+#37 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Symfony\\Component\\Console\\Application->run()
+#38 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1183): Illuminate\\Foundation\\Console\\Kernel->handle()
+#39 /home/marco/projects/private/filament-email-demo/artisan(13): Illuminate\\Foundation\\Application->handleCommand()
+#40 {main}
+
+[previous exception] [object] (PDOException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 19 UNIQUE constraint failed: users.email at /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php:571)
+[stacktrace]
+#0 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(571): PDOStatement->execute()
+#1 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(800): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}()
+#2 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(767): Illuminate\\Database\\Connection->runQueryCallback()
+#3 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(560): Illuminate\\Database\\Connection->run()
+#4 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(524): Illuminate\\Database\\Connection->statement()
+#5 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Query/Processors/Processor.php(32): Illuminate\\Database\\Connection->insert()
+#6 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3600): Illuminate\\Database\\Query\\Processors\\Processor->processInsertGetId()
+#7 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(2026): Illuminate\\Database\\Query\\Builder->insertGetId()
+#8 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1338): Illuminate\\Database\\Eloquent\\Builder->__call()
+#9 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1303): Illuminate\\Database\\Eloquent\\Model->insertAndSetId()
+#10 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1142): Illuminate\\Database\\Eloquent\\Model->performInsert()
+#11 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(1069): Illuminate\\Database\\Eloquent\\Model->save()
+#12 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Support/helpers.php(359): Illuminate\\Database\\Eloquent\\Builder->Illuminate\\Database\\Eloquent\\{closure}()
+#13 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(1068): tap()
+#14 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Support/Traits/ForwardsCalls.php(23): Illuminate\\Database\\Eloquent\\Builder->create()
+#15 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2340): Illuminate\\Database\\Eloquent\\Model->forwardCallTo()
+#16 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2352): Illuminate\\Database\\Eloquent\\Model->__call()
+#17 /home/marco/projects/private/filament-email-demo/database/seeders/DatabaseSeeder.php(25): Illuminate\\Database\\Eloquent\\Model::__callStatic()
+#18 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Database\\Seeders\\DatabaseSeeder->run()
+#19 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#20 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#21 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#22 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#23 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Seeder.php(184): Illuminate\\Container\\Container->call()
+#24 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Seeder.php(193): Illuminate\\Database\\Seeder->Illuminate\\Database\\{closure}()
+#25 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Console/Seeds/SeedCommand.php(70): Illuminate\\Database\\Seeder->__invoke()
+#26 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Concerns/GuardsAttributes.php(155): Illuminate\\Database\\Console\\Seeds\\SeedCommand->Illuminate\\Database\\Console\\Seeds\\{closure}()
+#27 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Console/Seeds/SeedCommand.php(69): Illuminate\\Database\\Eloquent\\Model::unguarded()
+#28 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Database\\Console\\Seeds\\SeedCommand->handle()
+#29 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#30 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#31 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#32 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#33 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Console/Command.php(212): Illuminate\\Container\\Container->call()
+#34 /home/marco/projects/private/filament-email-demo/vendor/symfony/console/Command/Command.php(279): Illuminate\\Console\\Command->execute()
+#35 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Console/Command.php(181): Symfony\\Component\\Console\\Command\\Command->run()
+#36 /home/marco/projects/private/filament-email-demo/vendor/symfony/console/Application.php(1049): Illuminate\\Console\\Command->run()
+#37 /home/marco/projects/private/filament-email-demo/vendor/symfony/console/Application.php(318): Symfony\\Component\\Console\\Application->doRunCommand()
+#38 /home/marco/projects/private/filament-email-demo/vendor/symfony/console/Application.php(169): Symfony\\Component\\Console\\Application->doRun()
+#39 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Symfony\\Component\\Console\\Application->run()
+#40 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1183): Illuminate\\Foundation\\Console\\Kernel->handle()
+#41 /home/marco/projects/private/filament-email-demo/artisan(13): Illuminate\\Foundation\\Application->handleCommand()
+#42 {main}
+"} 
+[2024-04-29 17:46:23] local.ERROR: The "--refresh" option does not exist. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\RuntimeException(code: 0): The \"--refresh\" option does not exist. at /home/marco/projects/private/filament-email-demo/vendor/symfony/console/Input/ArgvInput.php:217)
+[stacktrace]
+#0 /home/marco/projects/private/filament-email-demo/vendor/symfony/console/Input/ArgvInput.php(146): Symfony\\Component\\Console\\Input\\ArgvInput->addLongOption()
+#1 /home/marco/projects/private/filament-email-demo/vendor/symfony/console/Input/ArgvInput.php(79): Symfony\\Component\\Console\\Input\\ArgvInput->parseLongOption()
+#2 /home/marco/projects/private/filament-email-demo/vendor/symfony/console/Input/ArgvInput.php(68): Symfony\\Component\\Console\\Input\\ArgvInput->parseToken()
+#3 /home/marco/projects/private/filament-email-demo/vendor/symfony/console/Input/Input.php(53): Symfony\\Component\\Console\\Input\\ArgvInput->parse()
+#4 /home/marco/projects/private/filament-email-demo/vendor/symfony/console/Command/Command.php(238): Symfony\\Component\\Console\\Input\\Input->bind()
+#5 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Console/Command.php(181): Symfony\\Component\\Console\\Command\\Command->run()
+#6 /home/marco/projects/private/filament-email-demo/vendor/symfony/console/Application.php(1049): Illuminate\\Console\\Command->run()
+#7 /home/marco/projects/private/filament-email-demo/vendor/symfony/console/Application.php(318): Symfony\\Component\\Console\\Application->doRunCommand()
+#8 /home/marco/projects/private/filament-email-demo/vendor/symfony/console/Application.php(169): Symfony\\Component\\Console\\Application->doRun()
+#9 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Symfony\\Component\\Console\\Application->run()
+#10 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1183): Illuminate\\Foundation\\Console\\Kernel->handle()
+#11 /home/marco/projects/private/filament-email-demo/artisan(13): Illuminate\\Foundation\\Application->handleCommand()
+#12 {main}
+"} 
+[2024-04-29 18:34:07] local.ERROR: SQLSTATE[23000]: Integrity constraint violation: 19 UNIQUE constraint failed: users.email (Connection: sqlite, SQL: insert into "users" ("name", "email", "password", "updated_at", "created_at") values (User, user@example.com, $2y$12$P5vssiakiREPnsWkiPzHXOsr6Plf2u/szZIlydwlAu1CmkL64rNTK, 2024-04-29 18:34:07, 2024-04-29 18:34:07)) {"exception":"[object] (Illuminate\\Database\\UniqueConstraintViolationException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 19 UNIQUE constraint failed: users.email (Connection: sqlite, SQL: insert into \"users\" (\"name\", \"email\", \"password\", \"updated_at\", \"created_at\") values (User, user@example.com, $2y$12$P5vssiakiREPnsWkiPzHXOsr6Plf2u/szZIlydwlAu1CmkL64rNTK, 2024-04-29 18:34:07, 2024-04-29 18:34:07)) at /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php:808)
+[stacktrace]
+#0 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(767): Illuminate\\Database\\Connection->runQueryCallback()
+#1 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(560): Illuminate\\Database\\Connection->run()
+#2 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(524): Illuminate\\Database\\Connection->statement()
+#3 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Query/Processors/Processor.php(32): Illuminate\\Database\\Connection->insert()
+#4 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3600): Illuminate\\Database\\Query\\Processors\\Processor->processInsertGetId()
+#5 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(2026): Illuminate\\Database\\Query\\Builder->insertGetId()
+#6 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1338): Illuminate\\Database\\Eloquent\\Builder->__call()
+#7 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1303): Illuminate\\Database\\Eloquent\\Model->insertAndSetId()
+#8 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1142): Illuminate\\Database\\Eloquent\\Model->performInsert()
+#9 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(1069): Illuminate\\Database\\Eloquent\\Model->save()
+#10 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Support/helpers.php(359): Illuminate\\Database\\Eloquent\\Builder->Illuminate\\Database\\Eloquent\\{closure}()
+#11 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(1068): tap()
+#12 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Support/Traits/ForwardsCalls.php(23): Illuminate\\Database\\Eloquent\\Builder->create()
+#13 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2340): Illuminate\\Database\\Eloquent\\Model->forwardCallTo()
+#14 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2352): Illuminate\\Database\\Eloquent\\Model->__call()
+#15 /home/marco/projects/private/filament-email-demo/database/seeders/DatabaseSeeder.php(25): Illuminate\\Database\\Eloquent\\Model::__callStatic()
+#16 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Database\\Seeders\\DatabaseSeeder->run()
+#17 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#18 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#19 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#20 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#21 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Seeder.php(184): Illuminate\\Container\\Container->call()
+#22 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Seeder.php(193): Illuminate\\Database\\Seeder->Illuminate\\Database\\{closure}()
+#23 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Console/Seeds/SeedCommand.php(70): Illuminate\\Database\\Seeder->__invoke()
+#24 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Concerns/GuardsAttributes.php(155): Illuminate\\Database\\Console\\Seeds\\SeedCommand->Illuminate\\Database\\Console\\Seeds\\{closure}()
+#25 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Console/Seeds/SeedCommand.php(69): Illuminate\\Database\\Eloquent\\Model::unguarded()
+#26 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Database\\Console\\Seeds\\SeedCommand->handle()
+#27 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#28 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#29 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#30 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#31 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Console/Command.php(212): Illuminate\\Container\\Container->call()
+#32 /home/marco/projects/private/filament-email-demo/vendor/symfony/console/Command/Command.php(279): Illuminate\\Console\\Command->execute()
+#33 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Console/Command.php(181): Symfony\\Component\\Console\\Command\\Command->run()
+#34 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Console/Concerns/CallsCommands.php(67): Illuminate\\Console\\Command->run()
+#35 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Console/Concerns/CallsCommands.php(28): Illuminate\\Console\\Command->runCommand()
+#36 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(125): Illuminate\\Console\\Command->call()
+#37 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(622): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#38 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(109): Illuminate\\Database\\Migrations\\Migrator->usingConnection()
+#39 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(88): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->runMigrations()
+#40 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#41 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#42 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#43 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#44 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#45 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Console/Command.php(212): Illuminate\\Container\\Container->call()
+#46 /home/marco/projects/private/filament-email-demo/vendor/symfony/console/Command/Command.php(279): Illuminate\\Console\\Command->execute()
+#47 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Console/Command.php(181): Symfony\\Component\\Console\\Command\\Command->run()
+#48 /home/marco/projects/private/filament-email-demo/vendor/symfony/console/Application.php(1049): Illuminate\\Console\\Command->run()
+#49 /home/marco/projects/private/filament-email-demo/vendor/symfony/console/Application.php(318): Symfony\\Component\\Console\\Application->doRunCommand()
+#50 /home/marco/projects/private/filament-email-demo/vendor/symfony/console/Application.php(169): Symfony\\Component\\Console\\Application->doRun()
+#51 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Symfony\\Component\\Console\\Application->run()
+#52 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1183): Illuminate\\Foundation\\Console\\Kernel->handle()
+#53 /home/marco/projects/private/filament-email-demo/artisan(13): Illuminate\\Foundation\\Application->handleCommand()
+#54 {main}
+
+[previous exception] [object] (PDOException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 19 UNIQUE constraint failed: users.email at /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php:571)
+[stacktrace]
+#0 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(571): PDOStatement->execute()
+#1 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(800): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}()
+#2 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(767): Illuminate\\Database\\Connection->runQueryCallback()
+#3 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(560): Illuminate\\Database\\Connection->run()
+#4 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Connection.php(524): Illuminate\\Database\\Connection->statement()
+#5 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Query/Processors/Processor.php(32): Illuminate\\Database\\Connection->insert()
+#6 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3600): Illuminate\\Database\\Query\\Processors\\Processor->processInsertGetId()
+#7 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(2026): Illuminate\\Database\\Query\\Builder->insertGetId()
+#8 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1338): Illuminate\\Database\\Eloquent\\Builder->__call()
+#9 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1303): Illuminate\\Database\\Eloquent\\Model->insertAndSetId()
+#10 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1142): Illuminate\\Database\\Eloquent\\Model->performInsert()
+#11 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(1069): Illuminate\\Database\\Eloquent\\Model->save()
+#12 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Support/helpers.php(359): Illuminate\\Database\\Eloquent\\Builder->Illuminate\\Database\\Eloquent\\{closure}()
+#13 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(1068): tap()
+#14 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Support/Traits/ForwardsCalls.php(23): Illuminate\\Database\\Eloquent\\Builder->create()
+#15 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2340): Illuminate\\Database\\Eloquent\\Model->forwardCallTo()
+#16 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2352): Illuminate\\Database\\Eloquent\\Model->__call()
+#17 /home/marco/projects/private/filament-email-demo/database/seeders/DatabaseSeeder.php(25): Illuminate\\Database\\Eloquent\\Model::__callStatic()
+#18 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Database\\Seeders\\DatabaseSeeder->run()
+#19 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#20 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#21 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#22 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#23 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Seeder.php(184): Illuminate\\Container\\Container->call()
+#24 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Seeder.php(193): Illuminate\\Database\\Seeder->Illuminate\\Database\\{closure}()
+#25 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Console/Seeds/SeedCommand.php(70): Illuminate\\Database\\Seeder->__invoke()
+#26 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Concerns/GuardsAttributes.php(155): Illuminate\\Database\\Console\\Seeds\\SeedCommand->Illuminate\\Database\\Console\\Seeds\\{closure}()
+#27 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Console/Seeds/SeedCommand.php(69): Illuminate\\Database\\Eloquent\\Model::unguarded()
+#28 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Database\\Console\\Seeds\\SeedCommand->handle()
+#29 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#30 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#31 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#32 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#33 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Console/Command.php(212): Illuminate\\Container\\Container->call()
+#34 /home/marco/projects/private/filament-email-demo/vendor/symfony/console/Command/Command.php(279): Illuminate\\Console\\Command->execute()
+#35 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Console/Command.php(181): Symfony\\Component\\Console\\Command\\Command->run()
+#36 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Console/Concerns/CallsCommands.php(67): Illuminate\\Console\\Command->run()
+#37 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Console/Concerns/CallsCommands.php(28): Illuminate\\Console\\Command->runCommand()
+#38 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(125): Illuminate\\Console\\Command->call()
+#39 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(622): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#40 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(109): Illuminate\\Database\\Migrations\\Migrator->usingConnection()
+#41 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(88): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->runMigrations()
+#42 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#43 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#44 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#45 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#46 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Container/Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#47 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Console/Command.php(212): Illuminate\\Container\\Container->call()
+#48 /home/marco/projects/private/filament-email-demo/vendor/symfony/console/Command/Command.php(279): Illuminate\\Console\\Command->execute()
+#49 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Console/Command.php(181): Symfony\\Component\\Console\\Command\\Command->run()
+#50 /home/marco/projects/private/filament-email-demo/vendor/symfony/console/Application.php(1049): Illuminate\\Console\\Command->run()
+#51 /home/marco/projects/private/filament-email-demo/vendor/symfony/console/Application.php(318): Symfony\\Component\\Console\\Application->doRunCommand()
+#52 /home/marco/projects/private/filament-email-demo/vendor/symfony/console/Application.php(169): Symfony\\Component\\Console\\Application->doRun()
+#53 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Symfony\\Component\\Console\\Application->run()
+#54 /home/marco/projects/private/filament-email-demo/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1183): Illuminate\\Foundation\\Console\\Kernel->handle()
+#55 /home/marco/projects/private/filament-email-demo/artisan(13): Illuminate\\Foundation\\Application->handleCommand()
+#56 {main}
+"} 
+[2024-04-29 18:50:25] local.DEBUG: From: Filament Email Demo <user@example.com>
+To: user@example.com
+Subject: Reset Password Notification
+MIME-Version: 1.0
+Date: Mon, 29 Apr 2024 18:50:25 +0000
+Message-ID: <665d1c26649632d42f84f1db6fbd95fa@example.com>
+Content-Type: multipart/alternative; boundary=nWvD8dSc
+
+--nWvD8dSc
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Filament Email Demo: http://localhost
+
+# Hello!
+
+You are receiving this email because we received a password reset request for your account.
+
+Reset Password: http://localhost:8000/admin/password-reset/reset?email=user%40example.com&token=5d749b7dbafa24ec5bb462d055699f7db4d556df25d524d2f3e168e38c2f672e&signature=36ff795374122156c640bde64b3871008a705fc356f4202fe5458d0ecbf83372
+
+This password reset link will expire in 60 minutes.
+
+If you did not request a password reset, no further action is required.
+
+Regards,
+Filament Email Demo
+
+If you're having trouble clicking the "Reset Password" button, copy and paste the URL below
+into your web browser: [http://localhost:8000/admin/password-reset/reset?email=user%40example.com&token=5d749b7dbafa24ec5bb462d055699f7db4d556df25d524d2f3e168e38c2f672e&signature=36ff795374122156c640bde64b3871008a705fc356f4202fe5458d0ecbf83372](http://localhost:8000/admin/password-reset/reset?email=user%40example.com&token=5d749b7dbafa24ec5bb462d055699f7db4d556df25d524d2f3e168e38c2f672e&signature=36ff795374122156c640bde64b3871008a705fc356f4202fe5458d0ecbf83372)
+
+© 2024 Filament Email Demo. All rights reserved.
+
+--nWvD8dSc
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Filament Email Demo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="color-scheme" content="light">
+<meta name="supported-color-schemes" content="light">
+<style>
+@media only screen and (max-width: 600px) {
+.inner-body {
+width: 100% !important;
+}
+
+.footer {
+width: 100% !important;
+}
+}
+
+@media only screen and (max-width: 500px) {
+.button {
+width: 100% !important;
+}
+}
+</style>
+</head>
+<body style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; -webkit-text-size-adjust: none; background-color: #ffffff; color: #718096; height: 100%; line-height: 1.4; margin: 0; padding: 0; width: 100% !important;">
+
+<table class="wrapper" width="100%" cellpadding="0" cellspacing="0" role="presentation" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 100%; background-color: #edf2f7; margin: 0; padding: 0; width: 100%;">
+<tr>
+<td align="center" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative;">
+<table class="content" width="100%" cellpadding="0" cellspacing="0" role="presentation" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 100%; margin: 0; padding: 0; width: 100%;">
+<tr>
+<td class="header" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; padding: 25px 0; text-align: center;">
+<a href="http://localhost" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; color: #3d4852; font-size: 19px; font-weight: bold; text-decoration: none; display: inline-block;">
+Filament Email Demo
+</a>
+</td>
+</tr>
+
+<!-- Email Body -->
+<tr>
+<td class="body" width="100%" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 100%; background-color: #edf2f7; border-bottom: 1px solid #edf2f7; border-top: 1px solid #edf2f7; margin: 0; padding: 0; width: 100%; border: hidden !important;">
+<table class="inner-body" align="center" width="570" cellpadding="0" cellspacing="0" role="presentation" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 570px; background-color: #ffffff; border-color: #e8e5ef; border-radius: 2px; border-width: 1px; box-shadow: 0 2px 0 rgba(0, 0, 150, 0.025), 2px 4px 0 rgba(0, 0, 150, 0.015); margin: 0 auto; padding: 0; width: 570px;">
+<!-- Body content -->
+<tr>
+<td class="content-cell" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; max-width: 100vw; padding: 32px;">
+<h1 style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; color: #3d4852; font-size: 18px; font-weight: bold; margin-top: 0; text-align: left;">Hello!</h1>
+<p style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; font-size: 16px; line-height: 1.5em; margin-top: 0; text-align: left;">You are receiving this email because we received a password reset request for your account.</p>
+<table class="action" align="center" width="100%" cellpadding="0" cellspacing="0" role="presentation" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 100%; margin: 30px auto; padding: 0; text-align: center; width: 100%;">
+<tr>
+<td align="center" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative;">
+<table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative;">
+<tr>
+<td align="center" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative;">
+<tr>
+<td style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative;">
+<a href="http://localhost:8000/admin/password-reset/reset?email=user%40example.com&amp;token=5d749b7dbafa24ec5bb462d055699f7db4d556df25d524d2f3e168e38c2f672e&amp;signature=36ff795374122156c640bde64b3871008a705fc356f4202fe5458d0ecbf83372" class="button button-primary" target="_blank" rel="noopener" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; -webkit-text-size-adjust: none; border-radius: 4px; color: #fff; display: inline-block; overflow: hidden; text-decoration: none; background-color: #2d3748; border-bottom: 8px solid #2d3748; border-left: 18px solid #2d3748; border-right: 18px solid #2d3748; border-top: 8px solid #2d3748;">Reset Password</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<p style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; font-size: 16px; line-height: 1.5em; margin-top: 0; text-align: left;">This password reset link will expire in 60 minutes.</p>
+<p style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; font-size: 16px; line-height: 1.5em; margin-top: 0; text-align: left;">If you did not request a password reset, no further action is required.</p>
+<p style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; font-size: 16px; line-height: 1.5em; margin-top: 0; text-align: left;">Regards,<br>
+Filament Email Demo</p>
+
+
+<table class="subcopy" width="100%" cellpadding="0" cellspacing="0" role="presentation" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; border-top: 1px solid #e8e5ef; margin-top: 25px; padding-top: 25px;">
+<tr>
+<td style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative;">
+<p style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; line-height: 1.5em; margin-top: 0; text-align: left; font-size: 14px;">If you're having trouble clicking the "Reset Password" button, copy and paste the URL below
+into your web browser: <span class="break-all" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; word-break: break-all;"><a href="http://localhost:8000/admin/password-reset/reset?email=user%40example.com&amp;token=5d749b7dbafa24ec5bb462d055699f7db4d556df25d524d2f3e168e38c2f672e&amp;signature=36ff795374122156c640bde64b3871008a705fc356f4202fe5458d0ecbf83372" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; color: #3869d4;">http://localhost:8000/admin/password-reset/reset?email=user%40example.com&amp;token=5d749b7dbafa24ec5bb462d055699f7db4d556df25d524d2f3e168e38c2f672e&amp;signature=36ff795374122156c640bde64b3871008a705fc356f4202fe5458d0ecbf83372</a></span></p>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+
+<tr>
+<td style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative;">
+<table class="footer" align="center" width="570" cellpadding="0" cellspacing="0" role="presentation" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 570px; margin: 0 auto; padding: 0; text-align: center; width: 570px;">
+<tr>
+<td class="content-cell" align="center" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; max-width: 100vw; padding: 32px;">
+<p style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; line-height: 1.5em; margin-top: 0; color: #b0adc5; font-size: 12px; text-align: center;">© 2024 Filament Email Demo. All rights reserved.</p>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+--nWvD8dSc--
+  
+[2024-04-29 18:50:41] local.DEBUG: From: Filament Email Demo <user@example.com>
+To: user@example.com
+Subject: Reset Password Notification
+MIME-Version: 1.0
+Date: Mon, 29 Apr 2024 18:50:41 +0000
+Message-ID: <e6c87e210e54e421bb9e46f1fad677b5@example.com>
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Filament Email Demo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="color-scheme" content="light">
+<meta name="supported-color-schemes" content="light">
+<style>
+@media only screen and (max-width: 600px) {
+.inner-body {
+width: 100% !important;
+}
+
+.footer {
+width: 100% !important;
+}
+}
+
+@media only screen and (max-width: 500px) {
+.button {
+width: 100% !important;
+}
+}
+</style>
+</head>
+<body style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; -webkit-text-size-adjust: none; background-color: #ffffff; color: #718096; height: 100%; line-height: 1.4; margin: 0; padding: 0; width: 100% !important;">
+
+<table class="wrapper" width="100%" cellpadding="0" cellspacing="0" role="presentation" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 100%; background-color: #edf2f7; margin: 0; padding: 0; width: 100%;">
+<tr>
+<td align="center" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative;">
+<table class="content" width="100%" cellpadding="0" cellspacing="0" role="presentation" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 100%; margin: 0; padding: 0; width: 100%;">
+<tr>
+<td class="header" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; padding: 25px 0; text-align: center;">
+<a href="http://localhost" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; color: #3d4852; font-size: 19px; font-weight: bold; text-decoration: none; display: inline-block;">
+Filament Email Demo
+</a>
+</td>
+</tr>
+
+<!-- Email Body -->
+<tr>
+<td class="body" width="100%" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 100%; background-color: #edf2f7; border-bottom: 1px solid #edf2f7; border-top: 1px solid #edf2f7; margin: 0; padding: 0; width: 100%; border: hidden !important;">
+<table class="inner-body" align="center" width="570" cellpadding="0" cellspacing="0" role="presentation" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 570px; background-color: #ffffff; border-color: #e8e5ef; border-radius: 2px; border-width: 1px; box-shadow: 0 2px 0 rgba(0, 0, 150, 0.025), 2px 4px 0 rgba(0, 0, 150, 0.015); margin: 0 auto; padding: 0; width: 570px;">
+<!-- Body content -->
+<tr>
+<td class="content-cell" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; max-width: 100vw; padding: 32px;">
+<h1 style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; color: #3d4852; font-size: 18px; font-weight: bold; margin-top: 0; text-align: left;">Hello!</h1>
+<p style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; font-size: 16px; line-height: 1.5em; margin-top: 0; text-align: left;">You are receiving this email because we received a password reset request for your account.</p>
+<table class="action" align="center" width="100%" cellpadding="0" cellspacing="0" role="presentation" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 100%; margin: 30px auto; padding: 0; text-align: center; width: 100%;">
+<tr>
+<td align="center" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative;">
+<table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative;">
+<tr>
+<td align="center" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative;">
+<tr>
+<td style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative;">
+<a href="http://localhost:8000/admin/password-reset/reset?email=user%40example.com&amp;token=5d749b7dbafa24ec5bb462d055699f7db4d556df25d524d2f3e168e38c2f672e&amp;signature=36ff795374122156c640bde64b3871008a705fc356f4202fe5458d0ecbf83372" class="button button-primary" target="_blank" rel="noopener" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; -webkit-text-size-adjust: none; border-radius: 4px; color: #fff; display: inline-block; overflow: hidden; text-decoration: none; background-color: #2d3748; border-bottom: 8px solid #2d3748; border-left: 18px solid #2d3748; border-right: 18px solid #2d3748; border-top: 8px solid #2d3748;">Reset Password</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<p style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; font-size: 16px; line-height: 1.5em; margin-top: 0; text-align: left;">This password reset link will expire in 60 minutes.</p>
+<p style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; font-size: 16px; line-height: 1.5em; margin-top: 0; text-align: left;">If you did not request a password reset, no further action is required.</p>
+<p style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; font-size: 16px; line-height: 1.5em; margin-top: 0; text-align: left;">Regards,<br>
+Filament Email Demo</p>
+
+
+<table class="subcopy" width="100%" cellpadding="0" cellspacing="0" role="presentation" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; border-top: 1px solid #e8e5ef; margin-top: 25px; padding-top: 25px;">
+<tr>
+<td style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative;">
+<p style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; line-height: 1.5em; margin-top: 0; text-align: left; font-size: 14px;">If you're having trouble clicking the "Reset Password" button, copy and paste the URL below
+into your web browser: <span class="break-all" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; word-break: break-all;"><a href="http://localhost:8000/admin/password-reset/reset?email=user%40example.com&amp;token=5d749b7dbafa24ec5bb462d055699f7db4d556df25d524d2f3e168e38c2f672e&amp;signature=36ff795374122156c640bde64b3871008a705fc356f4202fe5458d0ecbf83372" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; color: #3869d4;">http://localhost:8000/admin/password-reset/reset?email=user%40example.com&amp;token=5d749b7dbafa24ec5bb462d055699f7db4d556df25d524d2f3e168e38c2f672e&amp;signature=36ff795374122156c640bde64b3871008a705fc356f4202fe5458d0ecbf83372</a></span></p>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+
+<tr>
+<td style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative;">
+<table class="footer" align="center" width="570" cellpadding="0" cellspacing="0" role="presentation" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 570px; margin: 0 auto; padding: 0; text-align: center; width: 570px;">
+<tr>
+<td class="content-cell" align="center" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; max-width: 100vw; padding: 32px;">
+<p style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; line-height: 1.5em; margin-top: 0; color: #b0adc5; font-size: 12px; text-align: center;">© 2024 Filament Email Demo. All rights reserved.</p>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>  
+[2024-04-29 19:33:25] local.DEBUG: From: Filament Email Demo <user@example.com>
+To: user@example.com
+Cc: john.doe@example.com
+Subject: Reset Password Notification
+MIME-Version: 1.0
+Date: Mon, 29 Apr 2024 19:33:25 +0000
+Message-ID: <e62d6ea14955c4999d0004ed8be3395e@example.com>
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Filament Email Demo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="color-scheme" content="light">
+<meta name="supported-color-schemes" content="light">
+<style>
+@media only screen and (max-width: 600px) {
+.inner-body {
+width: 100% !important;
+}
+
+.footer {
+width: 100% !important;
+}
+}
+
+@media only screen and (max-width: 500px) {
+.button {
+width: 100% !important;
+}
+}
+</style>
+</head>
+<body style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; -webkit-text-size-adjust: none; background-color: #ffffff; color: #718096; height: 100%; line-height: 1.4; margin: 0; padding: 0; width: 100% !important;">
+
+<table class="wrapper" width="100%" cellpadding="0" cellspacing="0" role="presentation" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 100%; background-color: #edf2f7; margin: 0; padding: 0; width: 100%;">
+<tr>
+<td align="center" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative;">
+<table class="content" width="100%" cellpadding="0" cellspacing="0" role="presentation" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 100%; margin: 0; padding: 0; width: 100%;">
+<tr>
+<td class="header" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; padding: 25px 0; text-align: center;">
+<a href="http://localhost" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; color: #3d4852; font-size: 19px; font-weight: bold; text-decoration: none; display: inline-block;">
+Filament Email Demo
+</a>
+</td>
+</tr>
+
+<!-- Email Body -->
+<tr>
+<td class="body" width="100%" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 100%; background-color: #edf2f7; border-bottom: 1px solid #edf2f7; border-top: 1px solid #edf2f7; margin: 0; padding: 0; width: 100%; border: hidden !important;">
+<table class="inner-body" align="center" width="570" cellpadding="0" cellspacing="0" role="presentation" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 570px; background-color: #ffffff; border-color: #e8e5ef; border-radius: 2px; border-width: 1px; box-shadow: 0 2px 0 rgba(0, 0, 150, 0.025), 2px 4px 0 rgba(0, 0, 150, 0.015); margin: 0 auto; padding: 0; width: 570px;">
+<!-- Body content -->
+<tr>
+<td class="content-cell" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; max-width: 100vw; padding: 32px;">
+<h1 style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; color: #3d4852; font-size: 18px; font-weight: bold; margin-top: 0; text-align: left;">Hello!</h1>
+<p style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; font-size: 16px; line-height: 1.5em; margin-top: 0; text-align: left;">You are receiving this email because we received a password reset request for your account.</p>
+<table class="action" align="center" width="100%" cellpadding="0" cellspacing="0" role="presentation" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 100%; margin: 30px auto; padding: 0; text-align: center; width: 100%;">
+<tr>
+<td align="center" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative;">
+<table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative;">
+<tr>
+<td align="center" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative;">
+<tr>
+<td style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative;">
+<a href="http://localhost:8000/admin/password-reset/reset?email=user%40example.com&amp;token=5d749b7dbafa24ec5bb462d055699f7db4d556df25d524d2f3e168e38c2f672e&amp;signature=36ff795374122156c640bde64b3871008a705fc356f4202fe5458d0ecbf83372" class="button button-primary" target="_blank" rel="noopener" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; -webkit-text-size-adjust: none; border-radius: 4px; color: #fff; display: inline-block; overflow: hidden; text-decoration: none; background-color: #2d3748; border-bottom: 8px solid #2d3748; border-left: 18px solid #2d3748; border-right: 18px solid #2d3748; border-top: 8px solid #2d3748;">Reset Password</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<p style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; font-size: 16px; line-height: 1.5em; margin-top: 0; text-align: left;">This password reset link will expire in 60 minutes.</p>
+<p style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; font-size: 16px; line-height: 1.5em; margin-top: 0; text-align: left;">If you did not request a password reset, no further action is required.</p>
+<p style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; font-size: 16px; line-height: 1.5em; margin-top: 0; text-align: left;">Regards,<br>
+Filament Email Demo</p>
+
+
+<table class="subcopy" width="100%" cellpadding="0" cellspacing="0" role="presentation" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; border-top: 1px solid #e8e5ef; margin-top: 25px; padding-top: 25px;">
+<tr>
+<td style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative;">
+<p style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; line-height: 1.5em; margin-top: 0; text-align: left; font-size: 14px;">If you're having trouble clicking the "Reset Password" button, copy and paste the URL below
+into your web browser: <span class="break-all" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; word-break: break-all;"><a href="http://localhost:8000/admin/password-reset/reset?email=user%40example.com&amp;token=5d749b7dbafa24ec5bb462d055699f7db4d556df25d524d2f3e168e38c2f672e&amp;signature=36ff795374122156c640bde64b3871008a705fc356f4202fe5458d0ecbf83372" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; color: #3869d4;">http://localhost:8000/admin/password-reset/reset?email=user%40example.com&amp;token=5d749b7dbafa24ec5bb462d055699f7db4d556df25d524d2f3e168e38c2f672e&amp;signature=36ff795374122156c640bde64b3871008a705fc356f4202fe5458d0ecbf83372</a></span></p>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+
+<tr>
+<td style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative;">
+<table class="footer" align="center" width="570" cellpadding="0" cellspacing="0" role="presentation" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 570px; margin: 0 auto; padding: 0; text-align: center; width: 570px;">
+<tr>
+<td class="content-cell" align="center" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; max-width: 100vw; padding: 32px;">
+<p style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; line-height: 1.5em; margin-top: 0; color: #b0adc5; font-size: 12px; text-align: center;">© 2024 Filament Email Demo. All rights reserved.</p>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>  
+[2024-04-29 19:35:18] local.DEBUG: From: Filament Email Demo <user@example.com>
+To: user@example.com
+Cc: john.doe@example.com
+Subject: Reset Password Notification
+MIME-Version: 1.0
+Date: Mon, 29 Apr 2024 19:35:18 +0000
+Message-ID: <ed652f3ed039332311067e13960e4753@example.com>
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Filament Email Demo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="color-scheme" content="light">
+<meta name="supported-color-schemes" content="light">
+<style>
+@media only screen and (max-width: 600px) {
+.inner-body {
+width: 100% !important;
+}
+
+.footer {
+width: 100% !important;
+}
+}
+
+@media only screen and (max-width: 500px) {
+.button {
+width: 100% !important;
+}
+}
+</style>
+</head>
+<body style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; -webkit-text-size-adjust: none; background-color: #ffffff; color: #718096; height: 100%; line-height: 1.4; margin: 0; padding: 0; width: 100% !important;">
+
+<table class="wrapper" width="100%" cellpadding="0" cellspacing="0" role="presentation" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 100%; background-color: #edf2f7; margin: 0; padding: 0; width: 100%;">
+<tr>
+<td align="center" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative;">
+<table class="content" width="100%" cellpadding="0" cellspacing="0" role="presentation" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 100%; margin: 0; padding: 0; width: 100%;">
+<tr>
+<td class="header" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; padding: 25px 0; text-align: center;">
+<a href="http://localhost" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; color: #3d4852; font-size: 19px; font-weight: bold; text-decoration: none; display: inline-block;">
+Filament Email Demo
+</a>
+</td>
+</tr>
+
+<!-- Email Body -->
+<tr>
+<td class="body" width="100%" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 100%; background-color: #edf2f7; border-bottom: 1px solid #edf2f7; border-top: 1px solid #edf2f7; margin: 0; padding: 0; width: 100%; border: hidden !important;">
+<table class="inner-body" align="center" width="570" cellpadding="0" cellspacing="0" role="presentation" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 570px; background-color: #ffffff; border-color: #e8e5ef; border-radius: 2px; border-width: 1px; box-shadow: 0 2px 0 rgba(0, 0, 150, 0.025), 2px 4px 0 rgba(0, 0, 150, 0.015); margin: 0 auto; padding: 0; width: 570px;">
+<!-- Body content -->
+<tr>
+<td class="content-cell" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; max-width: 100vw; padding: 32px;">
+<h1 style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; color: #3d4852; font-size: 18px; font-weight: bold; margin-top: 0; text-align: left;">Hello!</h1>
+<p style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; font-size: 16px; line-height: 1.5em; margin-top: 0; text-align: left;">You are receiving this email because we received a password reset request for your account.</p>
+<table class="action" align="center" width="100%" cellpadding="0" cellspacing="0" role="presentation" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 100%; margin: 30px auto; padding: 0; text-align: center; width: 100%;">
+<tr>
+<td align="center" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative;">
+<table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative;">
+<tr>
+<td align="center" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative;">
+<tr>
+<td style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative;">
+<a href="http://localhost:8000/admin/password-reset/reset?email=user%40example.com&amp;token=5d749b7dbafa24ec5bb462d055699f7db4d556df25d524d2f3e168e38c2f672e&amp;signature=36ff795374122156c640bde64b3871008a705fc356f4202fe5458d0ecbf83372" class="button button-primary" target="_blank" rel="noopener" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; -webkit-text-size-adjust: none; border-radius: 4px; color: #fff; display: inline-block; overflow: hidden; text-decoration: none; background-color: #2d3748; border-bottom: 8px solid #2d3748; border-left: 18px solid #2d3748; border-right: 18px solid #2d3748; border-top: 8px solid #2d3748;">Reset Password</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<p style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; font-size: 16px; line-height: 1.5em; margin-top: 0; text-align: left;">This password reset link will expire in 60 minutes.</p>
+<p style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; font-size: 16px; line-height: 1.5em; margin-top: 0; text-align: left;">If you did not request a password reset, no further action is required.</p>
+<p style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; font-size: 16px; line-height: 1.5em; margin-top: 0; text-align: left;">Regards,<br>
+Filament Email Demo</p>
+
+
+<table class="subcopy" width="100%" cellpadding="0" cellspacing="0" role="presentation" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; border-top: 1px solid #e8e5ef; margin-top: 25px; padding-top: 25px;">
+<tr>
+<td style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative;">
+<p style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; line-height: 1.5em; margin-top: 0; text-align: left; font-size: 14px;">If you're having trouble clicking the "Reset Password" button, copy and paste the URL below
+into your web browser: <span class="break-all" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; word-break: break-all;"><a href="http://localhost:8000/admin/password-reset/reset?email=user%40example.com&amp;token=5d749b7dbafa24ec5bb462d055699f7db4d556df25d524d2f3e168e38c2f672e&amp;signature=36ff795374122156c640bde64b3871008a705fc356f4202fe5458d0ecbf83372" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; color: #3869d4;">http://localhost:8000/admin/password-reset/reset?email=user%40example.com&amp;token=5d749b7dbafa24ec5bb462d055699f7db4d556df25d524d2f3e168e38c2f672e&amp;signature=36ff795374122156c640bde64b3871008a705fc356f4202fe5458d0ecbf83372</a></span></p>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+
+<tr>
+<td style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative;">
+<table class="footer" align="center" width="570" cellpadding="0" cellspacing="0" role="presentation" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 570px; margin: 0 auto; padding: 0; text-align: center; width: 570px;">
+<tr>
+<td class="content-cell" align="center" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; max-width: 100vw; padding: 32px;">
+<p style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; line-height: 1.5em; margin-top: 0; color: #b0adc5; font-size: 12px; text-align: center;">© 2024 Filament Email Demo. All rights reserved.</p>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>  
