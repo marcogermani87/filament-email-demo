@@ -1,8 +1,8 @@
 {
     "name": "laravel/laravel",
     "type": "project",
-    "description": "The skeleton application for the Laravel framework.",
-    "keywords": ["laravel", "framework"],
+    "description": "Log emails in your Filament project.",
+    "keywords": ["laravel", "filament", "email-log", "email"],
     "license": "MIT",
     "require": {
         "php": "^8.2",
@@ -24,9 +24,9 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "src/app/",
-            "Database\\Factories\\": "src/database/factories/",
-            "Database\\Seeders\\": "src/database/seeders/"
+            "App\\": "app/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/"
         }
     },
     "autoload-dev": {

@@ -45,6 +45,8 @@
     41 => 'RickDBCN\\FilamentEmail\\FilamentEmailServiceProvider',
     42 => 'RyanChandler\\BladeCaptureDirective\\BladeCaptureDirectiveServiceProvider',
     43 => 'Spatie\\LaravelIgnition\\IgnitionServiceProvider',
+    44 => 'App\\Providers\\AppServiceProvider',
+    45 => 'App\\Providers\\Filament\\AdminPanelProvider',
   ),
   'eager' => 
   array (
@@ -78,6 +80,8 @@
     27 => 'RickDBCN\\FilamentEmail\\FilamentEmailServiceProvider',
     28 => 'RyanChandler\\BladeCaptureDirective\\BladeCaptureDirectiveServiceProvider',
     29 => 'Spatie\\LaravelIgnition\\IgnitionServiceProvider',
+    30 => 'App\\Providers\\AppServiceProvider',
+    31 => 'App\\Providers\\Filament\\AdminPanelProvider',
   ),
   'deferred' => 
   array (
