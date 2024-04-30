@@ -16,6 +16,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src/src/app" isTestSource="false" packagePrefix="App\" />
       <sourceFolder url="file://$MODULE_DIR$/src/src/database/factories" isTestSource="false" packagePrefix="Database\Factories\" />
       <sourceFolder url="file://$MODULE_DIR$/src/src/database/seeders" isTestSource="false" packagePrefix="Database\Seeders\" />
+      <excludeFolder url="file://$MODULE_DIR$/.idea/dataSources" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
