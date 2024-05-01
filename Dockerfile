@@ -16,8 +16,7 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 
 RUN composer install \
     --ignore-platform-reqs \
-    --no-interaction \
-    --no-scripts
+    --no-interaction
 
 COPY src .
 
