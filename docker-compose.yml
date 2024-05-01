@@ -8,3 +8,16 @@ services:
       - "9000:9000"
     volumes:
       - ./src:/var/www/html/
+  web:
+    build:
+      dockerfile: Dockerfile-apache
+    image: ubuntu/apache2:2.4-22.04_beta
+    restart: unless-stopped
+    tty: true
+    links:
+      - php
+    ports:
+      - "${WEB_PORT:?}:80"
+    volumes:
+      - ./src/:/var/www/html
+      - ./data/apache2/logs:/var/log/apache2
