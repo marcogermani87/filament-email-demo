@@ -2,11 +2,9 @@ services:
   php:
     build:
       dockerfile: Dockerfile
-    entrypoint: php artisan octane:frankenphp --max-requests=1
-    ports:
-      - "8000:8000"
     restart: unless-stopped
     tty: true
+    ports:
+      - "9000:9000"
     volumes:
-      - /app/vendor
-      - ./src:/app
+      - ./src:/var/www/html/

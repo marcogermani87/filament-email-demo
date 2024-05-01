@@ -1,36 +1,52 @@
-FROM dunglas/frankenphp
+FROM php:8.3.6-fpm
 
-RUN apt-get update && apt-get install nano -y
+RUN apt-get update && apt-get install -y \
+    libpq-dev \
+    build-essential \
+    libpng-dev \
+    libjpeg62-turbo-dev \
+    libfreetype6-dev \
+    locales \
+    zip \
+    jpegoptim optipng pngquant gifsicle \
+    vim \
+    unzip \
+    curl \
+    libzip-dev \
+    libcurl4-gnutls-dev \
+    libicu-dev \
+    libmcrypt-dev \
+    libxml2-dev \
+    libxslt1-dev \
+    libssh2-1-dev \
+    libssh2-1 \
+    libssl-dev \
+    ssh \
+    wget \
+    libffi-dev \
+    cron \
+    rsyslog \
+    iputils-ping \
+    telnet \
+    nano \
+    default-mysql-client
 
-RUN install-php-extensions \
-    bcmath curl fileinfo intl json mbstring mcrypt mysqli pdo_mysql \
-    simplexml soap sockets xml xmlreader xmlrpc xmlwriter xsl zip ssh2 \
-    gd redis pcntl exif memcached sqlite3
+ADD https://github.com/mlocati/docker-php-extension-installer/releases/latest/download/install-php-extensions /usr/local/bin/
 
-WORKDIR /app
+RUN chmod +x /usr/local/bin/install-php-extensions
 
-COPY ./src/composer.json composer.json
-COPY ./src/composer.lock composer.lock
+RUN install-php-extensions bcmath curl fileinfo intl json mbstring mcrypt mysqli pdo_mysql \
+    simplexml soap sockets xml xmlreader xmlrpc xmlwriter xsl zip ssh2 gd redis pcntl exif memcached sqlite3
 
+# Install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-RUN composer install \
-    --ignore-platform-reqs \
-    --no-interaction \
-    --no-scripts
+COPY src /var/www/html/
 
-COPY src .
+# Set working directory
+WORKDIR /var/www/html/public
 
-#RUN cp .env.example .env
-#
-#RUN php -r "file_exists('database/database.sqlite') || touch('database/database.sqlite');"
-#
-#RUN php artisan migrate --no-interaction
-#
-#RUN php artisan db:seed
-#
-#RUN php artisan db:seed --class=EmailSeeder
+# Expose port 9000 and start php-fpm server
+EXPOSE 9000
 
-RUN php artisan octane:install --server=frankenphp
-
-ENTRYPOINT ["php", "artisan", "octane:frankenphp"]
+CMD ["php-fpm"]
