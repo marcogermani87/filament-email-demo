@@ -16,13 +16,16 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 
 RUN composer install \
     --ignore-platform-reqs \
-    --no-interaction
+    --no-interaction \
+    --no-scripts
 
 COPY src .
 
 RUN chown -R 1000:1000 /app/vendor
 
 RUN cp .env.example .env
+
+RUN php -r "file_exists('database/database.sqlite') || touch('database/database.sqlite');"
 
 RUN php artisan migrate --no-interaction
 
