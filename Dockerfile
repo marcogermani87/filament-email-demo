@@ -23,6 +23,8 @@ COPY src .
 
 RUN chown -R 1000:1000 /app/vendor
 
+RUN cp .env.example .env
+
 RUN php artisan migrate --no-interaction
 
 RUN php artisan db:seed
