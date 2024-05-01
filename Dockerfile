@@ -21,17 +21,15 @@ RUN composer install \
 
 COPY src .
 
-RUN chown -R 1000:1000 /app/vendor
-
-RUN cp .env.example .env
-
-RUN php -r "file_exists('database/database.sqlite') || touch('database/database.sqlite');"
-
-RUN php artisan migrate --no-interaction
-
-RUN php artisan db:seed
-
-RUN php artisan db:seed --class=EmailSeeder
+#RUN cp .env.example .env
+#
+#RUN php -r "file_exists('database/database.sqlite') || touch('database/database.sqlite');"
+#
+#RUN php artisan migrate --no-interaction
+#
+#RUN php artisan db:seed
+#
+#RUN php artisan db:seed --class=EmailSeeder
 
 RUN php artisan octane:install --server=frankenphp
 
