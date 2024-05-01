@@ -2,11 +2,8 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
-
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use Filament\Commands\MakeUserCommand;
 use Illuminate\Database\Seeder;
+use Filament\Commands\MakeUserCommand;
 use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
