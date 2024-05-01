@@ -1,6 +1,6 @@
 ## Installation
 
-Enabled .env config:
+Enable .env config:
 
 ```bash
 cp .env.production .env
@@ -11,7 +11,7 @@ Build and start docker containers:
 ```bash
 docker-compose up -d --build
 ```
-Install dependencies
+Install dependencies:
 
 ```bash
 docker-compose exec php bash -c "cd ../ && composer install"
