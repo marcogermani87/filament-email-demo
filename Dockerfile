@@ -23,7 +23,11 @@ COPY src .
 
 RUN chown -R 1000:1000 /app/vendor
 
-RUN php artisan migrate:fresh --seeder --no-interaction
+RUN php artisan migrate --no-interaction
+
+RUN php artisan db:seed
+
+RUN php artisan db:seed --class=EmailSeeder
 
 RUN php artisan octane:install --server=frankenphp
 
