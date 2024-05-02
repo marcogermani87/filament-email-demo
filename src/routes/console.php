@@ -9,10 +9,15 @@ Artisan::command('demo:refresh', function () {
         $file = new Illuminate\Filesystem\Filesystem();
         return $file->cleanDirectory($path);
     });
-    $this->call('migrate:fresh');
-    $this->call('db:seed');
+    $this->call('migrate:fresh', [
+        '--no-interaction',
+    ]);
+    $this->call('db:seed', [
+        '--no-interaction',
+    ]);
     $this->call('db:seed', [
         '--class' => 'EmailSeeder',
+        '--no-interaction',
     ]);
     $this->call('up');
 })->purpose('Prune and refresh all demo data')->hourly();
