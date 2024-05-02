@@ -19,6 +19,7 @@ class EmailFactory extends Factory
     {
         $attachments = [];
         $counter = $this->faker->numberBetween(0, 5);
+        $counterWords = $this->faker->numberBetween(5, 10);
 
         if ($counter > 0) {
             $savePath = 'filament-email-log' . DIRECTORY_SEPARATOR . date('YmdHis') . '_' . Str::random(8) . DIRECTORY_SEPARATOR;
@@ -43,18 +44,20 @@ class EmailFactory extends Factory
             }
         }
 
+        $datetime = $this->faker->dateTime();
+
         return [
             'from' => $this->faker->email(),
             'to' => $this->faker->email(),
             'cc' => $this->faker->email(),
-            'subject' => $this->faker->words(5, asText: true),
+            'subject' => ucfirst($this->faker->words($counterWords, asText: true)),
             'text_body' => $this->faker->paragraphs(asText: true),
             'html_body' => $this->faker->randomHtml(),
             'raw_body' => $this->faker->paragraphs(asText: true),
             'sent_debug_info' => $this->faker->paragraphs(asText: true),
             'attachments' => $attachments,
-            'created_at' => $this->faker->dateTime(),
-            'updated_at' => $this->faker->dateTime(),
+            'created_at' => $datetime,
+            'updated_at' => $datetime,
         ];
     }
 }
