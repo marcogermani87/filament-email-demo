@@ -25,18 +25,21 @@ class EmailFactory extends Factory
 
             if (!file_exists($savePath)) {
                 Storage::makeDirectory($savePath);
+                chmod(storage_path('app' . DIRECTORY_SEPARATOR . $savePath), 755);
             }
 
             for ($i = 0; $i < $counter; $i++) {
                 $fileName = Str::random(8) . '.pdf';
                 $filePath = "{$savePath}{$fileName}";
+                $storageFilePath = storage_path('app/' . $filePath);
                 LaravelMpdf::loadHTML($this->faker->randomHtml())
-                    ->save(storage_path('app/' . $filePath));
+                    ->save($storageFilePath);
                 $attachments[] = [
                     'name' => $fileName,
                     'contentType' => 'application/pdf',
                     'path' => $filePath,
                 ];
+                chmod($storageFilePath, 755);
             }
         }
 
