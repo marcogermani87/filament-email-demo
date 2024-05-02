@@ -13,7 +13,7 @@ Log all outgoing emails in your Laravel project within your Filament panel. You 
 
 ## Installation
 
-Enable .env config:
+Enable docker .env config:
 
 ```bash
 cp .env.production .env
@@ -24,6 +24,13 @@ Build and start docker containers:
 ```bash
 docker-compose up -d --build
 ```
+
+Enable application .env config:
+
+```bash
+cp src/.env.example src/.env
+```
+
 Install dependencies:
 
 ```bash
@@ -40,3 +47,48 @@ You're ready to go! Visit the url http://localhost:8001 in your browser, and log
 
 -   **Username:** user@example.com
 -   **Password:** 123Stella@
+
+## Reverse proxy for production
+
+Configuration for apache2 with Let's Encrypt:
+
+```apacheconf
+<VirtualHost *:80>
+
+    ServerName filament-email-demo.example.com
+
+    DocumentRoot /path/to/application/src/public/
+
+    ErrorLog ${APACHE_LOG_DIR}/filament-email-demo.example.com-error.log
+    CustomLog ${APACHE_LOG_DIR}/filament-email-demo.example.com-access.log combined
+
+    RewriteEngine on
+    RewriteCond %{SERVER_NAME} =filament-email-demo.example.com
+    RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
+
+</VirtualHost>
+
+<IfModule mod_ssl.c>
+    <VirtualHost *:443>
+
+        ServerName filament-email-demo.example.com
+
+        DocumentRoot /var/www/filament-email-demo/src/public/
+
+        ProxyPreserveHost On
+
+        ProxyPass / http://127.0.0.1:8001/
+        ProxyPassReverse / http://127.0.0.1:8001/
+
+        ErrorLog ${APACHE_LOG_DIR}/filament-email-demo.example.com-ssl-error.log
+        CustomLog ${APACHE_LOG_DIR}/filament-email-demo.example.com-ssl-access.log combined
+
+        SSLCertificateFile /etc/letsencrypt/live/filament-email-demo.example.com/fullchain.pem
+        SSLCertificateKeyFile /etc/letsencrypt/live/filament-email-demo.example.com/privkey.pem
+
+        Include /etc/letsencrypt/options-ssl-apache.conf
+
+    </VirtualHost>
+</IfModule>
+
+```
