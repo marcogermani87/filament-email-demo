@@ -4,8 +4,6 @@ services:
       dockerfile: Dockerfile
     restart: unless-stopped
     tty: true
-    ports:
-      - "9000:9000"
     volumes:
       - ./src:/var/www/html/
   web:
