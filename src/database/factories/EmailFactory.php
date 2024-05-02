@@ -26,7 +26,7 @@ class EmailFactory extends Factory
 
             if (!file_exists($savePath)) {
                 Storage::makeDirectory($savePath);
-                chmod(storage_path('app' . DIRECTORY_SEPARATOR . $savePath), 755);
+                chmod(storage_path('app' . DIRECTORY_SEPARATOR . $savePath), 0755);
             }
 
             for ($i = 0; $i < $counter; $i++) {
@@ -40,7 +40,7 @@ class EmailFactory extends Factory
                     'contentType' => 'application/pdf',
                     'path' => $filePath,
                 ];
-                chmod($storageFilePath, 755);
+                chmod($storageFilePath, 0755);
             }
         }
 
