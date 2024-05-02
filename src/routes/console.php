@@ -10,14 +10,14 @@ Artisan::command('demo:refresh', function () {
         return $file->cleanDirectory($path);
     });
     $this->call('migrate:fresh', [
-        '--force',
+        '--force' => true,
     ]);
     $this->call('db:seed', [
-        '--force',
+        '--force' => true,
     ]);
     $this->call('db:seed', [
         '--class' => 'EmailSeeder',
-        '--force',
+        '--force' => true,
     ]);
     $this->call('up');
 })->purpose('Prune and refresh all demo data')->hourly();
