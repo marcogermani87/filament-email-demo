@@ -30,4 +30,7 @@ return [
     'can_access' => [
         'role' => [],
     ],
+
+    //Create Team model and uncomment the line below to enable Tenant mode
+    'tenant_model' => \App\Models\Team::class,
 ];

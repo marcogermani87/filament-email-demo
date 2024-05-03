@@ -4,6 +4,8 @@ services:
       dockerfile: Dockerfile
     restart: unless-stopped
     tty: true
+    links:
+      - db
     volumes:
       - ./src:/var/www/html/
   web:
@@ -19,3 +21,28 @@ services:
     volumes:
       - ./src/:/var/www/html
       - ./data/apache2/logs:/var/log/apache2
+  db:
+    image: mysql:latest
+    restart: unless-stopped
+    tty: true
+    expose:
+      - ${MYSQL_PORT:?}
+    volumes:
+      - ./data/db:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD:?}"
+      MYSQL_DATABASE: "${MYSQL_DATABASE:?}"
+      MYSQL_USER: "${MYSQL_USER:?}"
+      MYSQL_PASSWORD: "${MYSQL_PASSWORD:?}"
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    links:
+      - db
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 1
+      UPLOAD_LIMIT: 50M
+    restart: "no"
+    ports:
+      - "28001:80"

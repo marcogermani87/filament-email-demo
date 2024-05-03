@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c00766ac9a14f47bbc3b5a9d29294160",
+    "content-hash": "b517d7c398e5a02f5fb93e1d4f364b0e",
     "packages": [
         {
             "name": "anourvalar/eloquent-serialize",
@@ -5420,16 +5420,16 @@
         },
         {
             "name": "rickdbcn/filament-email",
-            "version": "v1.3.1",
+            "version": "dev-main",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RickDBCN/filament-email.git",
-                "reference": "bd14908e1a90f67de3cc6fa852f0c33632157116"
+                "reference": "f7d4fb326e29caa48da24ddebf1d9c12aba29fa5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RickDBCN/filament-email/zipball/bd14908e1a90f67de3cc6fa852f0c33632157116",
-                "reference": "bd14908e1a90f67de3cc6fa852f0c33632157116",
+                "url": "https://api.github.com/repos/RickDBCN/filament-email/zipball/f7d4fb326e29caa48da24ddebf1d9c12aba29fa5",
+                "reference": "f7d4fb326e29caa48da24ddebf1d9c12aba29fa5",
                 "shasum": ""
             },
             "require": {
@@ -5448,6 +5448,7 @@
                 "pestphp/pest-plugin-laravel": "^2.0",
                 "pestphp/pest-plugin-livewire": "^2.1"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -5486,9 +5487,9 @@
             ],
             "support": {
                 "issues": "https://github.com/RickDBCN/filament-email/issues",
-                "source": "https://github.com/RickDBCN/filament-email/tree/v1.3.1"
+                "source": "https://github.com/RickDBCN/filament-email/tree/main"
             },
-            "time": "2024-04-27T20:43:14+00:00"
+            "time": "2024-05-03T20:36:20+00:00"
         },
         {
             "name": "ryangjchandler/blade-capture-directive",
@@ -10928,7 +10929,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "rickdbcn/filament-email": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

@@ -15,9 +15,5 @@ Artisan::command('demo:refresh', function () {
     $this->call('db:seed', [
         '--force' => true,
     ]);
-    $this->call('db:seed', [
-        '--class' => 'EmailSeeder',
-        '--force' => true,
-    ]);
     $this->call('up');
-})->purpose('Prune and refresh all demo data')->hourly();
+})->purpose('Prune and refresh all demo data')->everyFifteenMinutes();
