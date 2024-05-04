@@ -12,7 +12,7 @@
         "laravel/framework": "^11.0",
         "laravel/octane": "^2.3",
         "laravel/tinker": "^2.9",
-        "rickdbcn/filament-email": "dev-main"
+        "rickdbcn/filament-email": "^1.4"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
