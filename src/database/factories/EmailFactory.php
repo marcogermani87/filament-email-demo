@@ -20,6 +20,8 @@ class EmailFactory extends Factory
         $cc = [];
         $bcc = [];
         $attachments = [];
+        $chownUser = config('filament-email-demo.chown_user');
+        $chmodPermissions = config('filament-email-demo.chmod_permissions');
 
         $ccCounter = $this->faker->numberBetween(1, 3);
         $bccCounter = $this->faker->numberBetween(1, 3);
@@ -40,7 +42,9 @@ class EmailFactory extends Factory
 
             if (!file_exists($savePath)) {
                 Storage::makeDirectory($savePath);
-                chmod(storage_path('app' . DIRECTORY_SEPARATOR . $savePath), 0755);
+                $storageSavePath = storage_path('app' . DIRECTORY_SEPARATOR . $savePath);
+                chmod($storageSavePath, $chmodPermissions);
+                chown($storageSavePath, $chownUser);
             }
 
             for ($i = 0; $i < $counter; $i++) {
@@ -54,7 +58,8 @@ class EmailFactory extends Factory
                     'contentType' => 'application/pdf',
                     'path' => $filePath,
                 ];
-                chmod($storageFilePath, 0755);
+                chmod($storageFilePath, $chmodPermissions);
+                chown($storageFilePath, $chownUser);
             }
         }
 
