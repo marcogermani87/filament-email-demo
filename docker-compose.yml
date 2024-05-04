@@ -8,6 +8,9 @@ services:
       - db
     volumes:
       - ./src:/var/www/html/
+    profiles:
+      - dev
+      - prod
   web:
     build:
       dockerfile: Dockerfile-apache
@@ -21,6 +24,9 @@ services:
     volumes:
       - ./src/:/var/www/html
       - ./data/apache2/logs:/var/log/apache2
+    profiles:
+      - dev
+      - prod
   db:
     image: mysql:latest
     restart: unless-stopped
@@ -34,6 +40,9 @@ services:
       MYSQL_DATABASE: "${MYSQL_DATABASE:?}"
       MYSQL_USER: "${MYSQL_USER:?}"
       MYSQL_PASSWORD: "${MYSQL_PASSWORD:?}"
+    profiles:
+      - dev
+      - prod
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     links:
@@ -46,3 +55,5 @@ services:
     restart: "no"
     ports:
       - "28001:80"
+    profiles:
+      - dev
