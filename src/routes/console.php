@@ -12,10 +12,12 @@ Artisan::command('demo:refresh', function () {
         return $file->cleanDirectory($path);
     });
     Log::info("Dropped all files and directories", ['command' => $this->signature]);
-    $this->call('migrate:fresh', [
+    $this->call('db:truncate', [
+        'tables' => ['users', 'teams', 'team_user', 'filament_email_log'],
+        '--checks' => false,
         '--force' => true,
     ]);
-    Log::info("Executed artisan migrate:fresh --force", ['command' => $this->signature]);
+    Log::info("Executed artisan db:truncate users teams team_user filament_email_log --checks --force", ['command' => $this->signature]);
     $this->call('db:seed', [
         '--force' => true,
     ]);

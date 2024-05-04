@@ -2,6 +2,7 @@
 
 namespace App\Providers\Filament;
 
+use Amendozaaguiar\FilamentRouteStatistics\FilamentRouteStatisticsPlugin;
 use App\Filament\Pages\Admin\EditTeamProfile;
 use App\Filament\Pages\Admin\RegisterTeam;
 use App\Filament\Pages\Auth\Login;
@@ -62,6 +63,9 @@ class AdminPanelProvider extends PanelProvider
             ->authMiddleware([
                 Authenticate::class,
             ])
-            ->plugin(FilamentEmail::make());
+            ->plugins([
+                FilamentEmail::make(),
+                FilamentRouteStatisticsPlugin::make(),
+            ]);
     }
 }

@@ -1,4 +1,11 @@
 <?php return array (
+  'amendozaaguiar/filament-route-statistics' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Amendozaaguiar\\FilamentRouteStatistics\\FilamentRouteStatisticsServiceProvider',
+    ),
+  ),
   'anourvalar/eloquent-serialize' => 
   array (
     'aliases' => 
@@ -11,6 +18,31 @@
     'providers' => 
     array (
       0 => 'BezhanSalleh\\FilamentLanguageSwitch\\FilamentLanguageSwitchServiceProvider',
+    ),
+  ),
+  'bilfeldt/laravel-correlation-id' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Bilfeldt\\CorrelationId\\CorrelationIdServiceProvider',
+    ),
+  ),
+  'bilfeldt/laravel-request-logger' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Bilfeldt\\RequestLogger\\RequestLoggerServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'RequestLogger' => 'Bilfeldt\\RequestLogger\\RequestLoggerFacade',
+    ),
+  ),
+  'bilfeldt/laravel-route-statistics' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Bilfeldt\\LaravelRouteStatistics\\LaravelRouteStatisticsServiceProvider',
     ),
   ),
   'blade-ui-kit/blade-heroicons' => 
@@ -99,6 +131,17 @@
     'providers' => 
     array (
       0 => 'Kirschbaum\\PowerJoins\\PowerJoinsServiceProvider',
+    ),
+  ),
+  'laracraft-tech/laravel-useful-additions' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'LaracraftTech\\LaravelUsefulAdditions\\LaravelUsefulAdditionsServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'LaravelUsefulAdditions' => 'LaracraftTech\\LaravelUsefulAdditions\\Facades\\LaravelUsefulAdditions',
     ),
   ),
   'laravel/octane' => 
