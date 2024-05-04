@@ -33,7 +33,7 @@ class EmailFactory extends Factory
         $bccCounter = $this->faker->numberBetween(0, $emailFactoryBccMax);
 
         for ($i = 0; $i < $toCounter; $i++) {
-            $cc[] = $this->faker->safeEmail();
+            $to[] = $this->faker->safeEmail();
         }
 
         for ($i = 0; $i < $ccCounter; $i++) {
