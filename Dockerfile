@@ -39,6 +39,8 @@ RUN chmod +x /usr/local/bin/install-php-extensions
 RUN install-php-extensions bcmath curl fileinfo intl json mbstring mcrypt mysqli pdo_mysql \
     simplexml soap sockets xml xmlreader xmlrpc xmlwriter xsl zip ssh2 gd redis pcntl exif memcached sqlite3
 
+COPY "utils/php/php.ini" "$PHP_INI_DIR/php.ini"
+
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 COPY src /var/www/html/

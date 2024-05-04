@@ -16,6 +16,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        $emailFactoryCount = config('filament-email-demo.email_factory_count');
+
         $filamentMakeUserCommand = new MakeUserCommand();
         $reflector = new \ReflectionObject($filamentMakeUserCommand);
 
@@ -41,14 +43,14 @@ class DatabaseSeeder extends Seeder
             $team->members()->attach($user[0]);
             $team->save();
             Email::factory()
-                ->count(25)
+                ->count($emailFactoryCount)
                 ->create([
                     'team_id' => $team->id,
                 ]);
         }
 
         Email::factory()
-            ->count(25)
+            ->count($emailFactoryCount)
             ->create();
     }
 }

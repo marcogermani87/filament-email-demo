@@ -17,14 +17,24 @@ class EmailFactory extends Factory
 
     public function definition(): array
     {
+        $to = [];
         $cc = [];
         $bcc = [];
         $attachments = [];
         $chownUser = config('filament-email-demo.chown_user');
         $chmodPermissions = config('filament-email-demo.chmod_permissions');
+        $emailFactoryToMax = config('filament-email-demo.email_factory_to_max');
+        $emailFactoryCcMax = config('filament-email-demo.email_factory_cc_max');
+        $emailFactoryBccMax = config('filament-email-demo.email_factory_bcc_max');
+        $emailFactoryAttachmentsMax = config('filament-email-demo.email_factory_attachments_max');
 
-        $ccCounter = $this->faker->numberBetween(1, 3);
-        $bccCounter = $this->faker->numberBetween(1, 3);
+        $toCounter = $this->faker->numberBetween(1, $emailFactoryToMax);
+        $ccCounter = $this->faker->numberBetween(0, $emailFactoryCcMax);
+        $bccCounter = $this->faker->numberBetween(0, $emailFactoryBccMax);
+
+        for ($i = 0; $i < $toCounter; $i++) {
+            $cc[] = $this->faker->safeEmail();
+        }
 
         for ($i = 0; $i < $ccCounter; $i++) {
             $cc[] = $this->faker->safeEmail();
@@ -34,7 +44,7 @@ class EmailFactory extends Factory
             $bcc[] = $this->faker->safeEmail();
         }
 
-        $counter = $this->faker->numberBetween(0, 5);
+        $counter = $this->faker->numberBetween(0, $emailFactoryAttachmentsMax);
         $counterWords = $this->faker->numberBetween(5, 10);
 
         if ($counter > 0) {
@@ -67,7 +77,7 @@ class EmailFactory extends Factory
 
         return [
             'from' => $this->faker->safeEmail(),
-            'to' => $this->faker->email(),
+            'to' => implode(',', $to),
             'cc' => implode(',', $cc),
             'bcc' => implode(',', $bcc),
             'subject' => ucfirst($this->faker->words($counterWords, asText: true)),
