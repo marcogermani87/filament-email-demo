@@ -11,6 +11,12 @@
 
 Log all outgoing emails in your Laravel project within your Filament panel. You can also resend emails with 1-click in case your recipient hasn't received your email.
 
+## Application ENV
+
+| Package  | Filament | Laravel | Apache | PHP | MySQL |
+| ------------- | ------------- | ------------- | -------------| -------------| -------------|
+| 1.x  | 3.x  | 11.x | 2.4.x | 8.3.6 + FPM | 8.x |
+
 ## Installation
 
 Enable docker .env config:
