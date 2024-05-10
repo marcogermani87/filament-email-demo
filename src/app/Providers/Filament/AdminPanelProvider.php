@@ -6,6 +6,8 @@ use Amendozaaguiar\FilamentRouteStatistics\FilamentRouteStatisticsPlugin;
 use App\Filament\Pages\Admin\EditTeamProfile;
 use App\Filament\Pages\Admin\RegisterTeam;
 use App\Filament\Pages\Auth\Login;
+use App\Filament\Widgets\FilamentEmailInfoWidget;
+use App\Filament\Widgets\ResetAlertWidget;
 use App\Models\Team;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DisableBladeIconComponents;
@@ -46,8 +48,9 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
             ->widgets([
-                Widgets\AccountWidget::class,
+                ResetAlertWidget::class,
                 Widgets\FilamentInfoWidget::class,
+                FilamentEmailInfoWidget::class,
             ])
             ->middleware([
                 EncryptCookies::class,
