@@ -96,5 +96,13 @@ Configuration for apache2 with Let's Encrypt:
 
     </VirtualHost>
 </IfModule>
-
 ```
+
+## Changelog
+
+Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
+
+## Credits
+
+- [Marco Germani](https://github.com/marcogermani87)
+- [All Contributors](../../contributors)
