@@ -6,6 +6,7 @@ use Amendozaaguiar\FilamentRouteStatistics\FilamentRouteStatisticsPlugin;
 use App\Filament\Pages\Admin\EditTeamProfile;
 use App\Filament\Pages\Admin\RegisterTeam;
 use App\Filament\Pages\Auth\Login;
+use App\Filament\Widgets\FilamentCookieConsentInfoWidget;
 use App\Filament\Widgets\FilamentEmailInfoWidget;
 use App\Filament\Widgets\ResetAlertWidget;
 use App\Models\Team;
@@ -52,6 +53,7 @@ class AdminPanelProvider extends PanelProvider
                 ResetAlertWidget::class,
                 Widgets\FilamentInfoWidget::class,
                 FilamentEmailInfoWidget::class,
+                FilamentCookieConsentInfoWidget::class,
             ])
             ->middleware([
                 EncryptCookies::class,
