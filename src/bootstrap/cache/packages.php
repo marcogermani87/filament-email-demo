@@ -180,6 +180,17 @@
       'Livewire' => 'Livewire\\Livewire',
     ),
   ),
+  'marcogermani87/filament-cookie-consent' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'MarcoGermani87\\FilamentCookieConsent\\FilamentCookieConsentServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'Skeleton' => 'MarcoGermani87\\FilamentCookieConsent\\Facades\\FilamentCookieConsent',
+    ),
+  ),
   'nesbot/carbon' => 
   array (
     'providers' => 
@@ -221,6 +232,13 @@
     'aliases' => 
     array (
       'BladeCaptureDirective' => 'RyanChandler\\BladeCaptureDirective\\Facades\\BladeCaptureDirective',
+    ),
+  ),
+  'spatie/laravel-cookie-consent' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Spatie\\CookieConsent\\CookieConsentServiceProvider',
     ),
   ),
   'spatie/laravel-ignition' => 

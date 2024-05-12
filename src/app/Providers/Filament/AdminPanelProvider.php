@@ -24,6 +24,7 @@ use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
+use MarcoGermani87\FilamentCookieConsent\FilamentCookieConsent;
 use RickDBCN\FilamentEmail\FilamentEmail;
 
 class AdminPanelProvider extends PanelProvider
@@ -69,6 +70,7 @@ class AdminPanelProvider extends PanelProvider
             ->plugins([
                 FilamentEmail::make(),
                 FilamentRouteStatisticsPlugin::make(),
+                FilamentCookieConsent::make(),
             ]);
     }
 }
