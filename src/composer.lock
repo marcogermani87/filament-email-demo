@@ -3979,16 +3979,16 @@
         },
         {
             "name": "marcogermani87/filament-cookie-consent",
-            "version": "v1.0.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/marcogermani87/filament-cookie-consent.git",
-                "reference": "ac357290c627958b5d84bf290bafbcaa785f521c"
+                "reference": "b3c69b9f3776a787a407890cb72e75eb736cee5e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/marcogermani87/filament-cookie-consent/zipball/ac357290c627958b5d84bf290bafbcaa785f521c",
-                "reference": "ac357290c627958b5d84bf290bafbcaa785f521c",
+                "url": "https://api.github.com/repos/marcogermani87/filament-cookie-consent/zipball/b3c69b9f3776a787a407890cb72e75eb736cee5e",
+                "reference": "b3c69b9f3776a787a407890cb72e75eb736cee5e",
                 "shasum": ""
             },
             "require": {
@@ -4052,15 +4052,15 @@
             ],
             "support": {
                 "issues": "https://github.com/marcogermani87/filament-cookie-consent/issues",
-                "source": "https://github.com/marcogermani87/filament-cookie-consent/tree/v1.0.0"
+                "source": "https://github.com/marcogermani87/filament-cookie-consent/tree/v1.0.1"
             },
             "funding": [
                 {
-                    "url": "https://github.com/:vendor_name",
+                    "url": "https://github.com/marcogermani87",
                     "type": "github"
                 }
             ],
-            "time": "2024-05-12T20:24:54+00:00"
+            "time": "2024-05-13T08:53:19+00:00"
         },
         {
             "name": "masterminds/html5",
