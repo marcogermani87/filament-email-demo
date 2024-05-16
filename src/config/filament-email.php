@@ -32,6 +32,10 @@ return [
         'role' => [],
     ],
 
+    'pagination_page_options' => [
+        10, 25, 50, 'all',
+    ],
+
     //Create Team model and uncomment the line below to enable Tenant mode
     'tenant_model' => \App\Models\Team::class,
 ];
