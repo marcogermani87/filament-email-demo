@@ -1,6 +1,6 @@
 <x-filament-widgets::widget class="fi-filament-email-info-widget">
     <x-filament::section>
-        <div class="flex items-center gap-x-3">
+        <div class="flex items-center gap-x-3 overflow-x-clip">
             <div class="flex-1">
                 <a
                     href="https://github.com/RickDBCN/filament-email"

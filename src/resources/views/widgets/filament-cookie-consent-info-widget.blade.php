@@ -1,7 +1,7 @@
 <x-filament-widgets::widget class="fi-filament-email-info-widget">
     <x-filament::section>
         <div class="flex items-center gap-x-3">
-            <div class="flex-1">
+            <div class="flex-1 overflow-x-clip">
                 <a
                     href="https://github.com/marcogermani87/filament-cookie-consent"
                     rel="noopener noreferrer"
