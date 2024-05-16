@@ -10,6 +10,7 @@
         "bezhansalleh/filament-language-switch": "^3.1",
         "carlos-meneses/laravel-mpdf": "^2.1",
         "filament/filament": "^3.2",
+        "joaopaulolndev/filament-general-settings": "^1.0",
         "laracraft-tech/laravel-useful-additions": "^4.0",
         "laravel/framework": "^11.0",
         "laravel/octane": "^2.3",

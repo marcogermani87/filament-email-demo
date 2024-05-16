@@ -32,7 +32,7 @@ services:
     restart: unless-stopped
     tty: true
     expose:
-      - ${MYSQL_PORT:?}
+      - "127.0.0.1:${MYSQL_PORT:?}:3306"
     volumes:
       - ./data/db:/var/lib/mysql
     environment:

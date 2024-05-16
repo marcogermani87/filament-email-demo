@@ -126,6 +126,17 @@
       0 => 'Filament\\Widgets\\WidgetsServiceProvider',
     ),
   ),
+  'joaopaulolndev/filament-general-settings' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Joaopaulolndev\\FilamentGeneralSettings\\FilamentGeneralSettingsServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'FilamentGeneralSettings' => 'Joaopaulolndev\\FilamentGeneralSettings\\Facades\\FilamentGeneralSettings',
+    ),
+  ),
   'kirschbaum-development/eloquent-power-joins' => 
   array (
     'providers' => 
