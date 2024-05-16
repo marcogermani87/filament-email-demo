@@ -202,6 +202,17 @@
       'Skeleton' => 'MarcoGermani87\\FilamentCookieConsent\\Facades\\FilamentCookieConsent',
     ),
   ),
+  'marcogermani87/filament-matomo' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'MarcoGermani87\\FilamentMatomo\\FilamentMatomoServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'FilamentMatomo' => 'MarcoGermani87\\FilamentMatomo\\Facades\\FilamentMatomo',
+    ),
+  ),
   'nesbot/carbon' => 
   array (
     'providers' => 

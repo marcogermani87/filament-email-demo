@@ -26,6 +26,7 @@ use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 use MarcoGermani87\FilamentCookieConsent\FilamentCookieConsent;
+use MarcoGermani87\FilamentMatomo\FilamentMatomo;
 use RickDBCN\FilamentEmail\FilamentEmail;
 
 class AdminPanelProvider extends PanelProvider
@@ -73,6 +74,7 @@ class AdminPanelProvider extends PanelProvider
                 FilamentEmail::make(),
                 FilamentRouteStatisticsPlugin::make(),
                 FilamentCookieConsent::make(),
+                FilamentMatomo::make(),
             ]);
     }
 }
