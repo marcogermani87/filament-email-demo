@@ -24,7 +24,10 @@ return [
     ],
 
     'keep_email_for_days' => 60,
+
     'label' => null,
+
+    'prune_enabled' => true,
 
     'prune_crontab' => '0 0 * * *',
 
