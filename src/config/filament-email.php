@@ -39,6 +39,9 @@ return [
         10, 25, 50, 'all',
     ],
 
+    'attachments_disk' => 'local',
+    'store_attachments' => true,
+
     //Create Team model and uncomment the line below to enable Tenant mode
     'tenant_model' => \App\Models\Team::class,
 ];

@@ -10,6 +10,7 @@ use App\Filament\Widgets\FilamentCookieConsentInfoWidget;
 use App\Filament\Widgets\FilamentEmailInfoWidget;
 use App\Filament\Widgets\ResetAlertWidget;
 use App\Models\Team;
+use BezhanSalleh\FilamentShield\FilamentShieldPlugin;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
@@ -37,9 +38,9 @@ class AdminPanelProvider extends PanelProvider
             ->default()
             ->id('admin')
             ->path('admin')
-            ->tenant(Team::class)
-            ->tenantRegistration(RegisterTeam::class)
-            ->tenantProfile(EditTeamProfile::class)
+//            ->tenant(Team::class)
+//            ->tenantRegistration(RegisterTeam::class)
+//            ->tenantProfile(EditTeamProfile::class)
             ->login(Login::class)
             ->colors([
                 'primary' => Color::Amber,
@@ -75,6 +76,7 @@ class AdminPanelProvider extends PanelProvider
                 FilamentRouteStatisticsPlugin::make(),
                 FilamentCookieConsent::make(),
                 FilamentMatomo::make(),
+                //FilamentShieldPlugin::make(),
             ]);
     }
 }

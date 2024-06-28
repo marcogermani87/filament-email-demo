@@ -8,6 +8,7 @@
         "php": "^8.2",
         "amendozaaguiar/filament-route-statistics": "^3.0",
         "bezhansalleh/filament-language-switch": "^3.1",
+        "bezhansalleh/filament-shield": "^3.2",
         "carlos-meneses/laravel-mpdf": "^2.1",
         "filament/filament": "^3.2",
         "laracraft-tech/laravel-useful-additions": "^4.0",
