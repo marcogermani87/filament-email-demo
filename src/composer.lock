@@ -6002,16 +6002,16 @@
         },
         {
             "name": "rickdbcn/filament-email",
-            "version": "v1.4.9",
+            "version": "v1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RickDBCN/filament-email.git",
-                "reference": "48701fed5339be4cb7fc02b38769474ca1aad404"
+                "reference": "61703fbd56d12d5b6208c024f57192dbcb4b1941"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RickDBCN/filament-email/zipball/48701fed5339be4cb7fc02b38769474ca1aad404",
-                "reference": "48701fed5339be4cb7fc02b38769474ca1aad404",
+                "url": "https://api.github.com/repos/RickDBCN/filament-email/zipball/61703fbd56d12d5b6208c024f57192dbcb4b1941",
+                "reference": "61703fbd56d12d5b6208c024f57192dbcb4b1941",
                 "shasum": ""
             },
             "require": {
@@ -6068,9 +6068,9 @@
             ],
             "support": {
                 "issues": "https://github.com/RickDBCN/filament-email/issues",
-                "source": "https://github.com/RickDBCN/filament-email/tree/v1.4.9"
+                "source": "https://github.com/RickDBCN/filament-email/tree/v1.5.0"
             },
-            "time": "2024-07-24T17:12:24+00:00"
+            "time": "2024-07-26T23:23:32+00:00"
         },
         {
             "name": "ryangjchandler/blade-capture-directive",
