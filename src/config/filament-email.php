@@ -1,12 +1,12 @@
 <?php
 
 use RickDBCN\FilamentEmail\Filament\Resources\EmailResource;
-use RickDBCN\FilamentEmail\Models\Email;
+//use RickDBCN\FilamentEmail\Models\Email;
 
 return [
     'resource' => [
         'class' => EmailResource::class,
-        'model' => Email::class,
+        'model' => \App\Models\Email::class,
         'group' => null,
         'sort' => null,
         'icon' => null,
