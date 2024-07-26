@@ -2,6 +2,15 @@
 
 All notable changes to `filament-email-demo` will be documented in this file.
 
+## v1.2.0 - 2024-07-26
+
+### What's Changed
+
+* Bump rickdbcn/filament-email to v1.5.0
+* Updated deps
+
+**Full Changelog**: https://github.com/marcogermani87/filament-email-demo/compare/v1.1.12...v1.2.0
+
 ## v1.1.12 - 2024-07-02
 
 ### What's Changed
