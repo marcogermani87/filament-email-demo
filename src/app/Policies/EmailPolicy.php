@@ -2,8 +2,8 @@
 
 namespace App\Policies;
 
+use App\Models\Email;
 use App\Models\User;
-use RickDBCN\FilamentEmail\Models\Email;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
 class EmailPolicy

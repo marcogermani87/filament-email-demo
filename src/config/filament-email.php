@@ -1,9 +1,10 @@
 <?php
 
-use RickDBCN\FilamentEmail\Filament\Resources\EmailResource;
 //use RickDBCN\FilamentEmail\Models\Email;
+use RickDBCN\FilamentEmail\Filament\Resources\EmailResource;
 
 return [
+
     'resource' => [
         'class' => EmailResource::class,
         'model' => \App\Models\Email::class,
@@ -13,7 +14,6 @@ return [
         'default_sort_column' => 'created_at',
         'default_sort_direction' => 'desc',
         'datetime_format' => 'Y-m-d H:i:s',
-        'filter_date_format' => 'Y-m-d',
         'table_search_fields' => [
             'subject',
             'from',
@@ -44,4 +44,5 @@ return [
 
     //Create Team model and uncomment the line below to enable Tenant mode
     'tenant_model' => \App\Models\Team::class,
+
 ];

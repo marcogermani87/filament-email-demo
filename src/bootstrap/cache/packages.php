@@ -191,6 +191,17 @@
       'Livewire' => 'Livewire\\Livewire',
     ),
   ),
+  'malzariey/filament-daterangepicker-filter' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Malzariey\\FilamentDaterangepickerFilter\\FilamentDaterangepickerFilterServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'FilamentDaterangepickerFilter' => 'Malzariey\\FilamentDaterangepickerFilter\\Facades\\FilamentDaterangepickerFilter',
+    ),
+  ),
   'marcogermani87/filament-cookie-consent' => 
   array (
     'providers' => 

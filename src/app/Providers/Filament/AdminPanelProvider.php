@@ -25,6 +25,7 @@ use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
 use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Session\Middleware\StartSession;
+use Illuminate\Support\Facades\App;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 use MarcoGermani87\FilamentCookieConsent\FilamentCookieConsent;
 use MarcoGermani87\FilamentMatomo\FilamentMatomo;
@@ -34,13 +35,19 @@ class AdminPanelProvider extends PanelProvider
 {
     public function panel(Panel $panel): Panel
     {
-        return $panel
+        $panel = $panel
             ->default()
             ->id('admin')
             ->path('admin')
-//            ->tenant(Team::class)
-//            ->tenantRegistration(RegisterTeam::class)
-//            ->tenantProfile(EditTeamProfile::class)
+            ->spa(!App::hasDebugModeEnabled());
+
+        if (config('filament-email-demo.tenant_enabled')) {
+            $panel->tenant(Team::class)
+                ->tenantRegistration(RegisterTeam::class)
+                ->tenantProfile(EditTeamProfile::class);
+        }
+
+        return $panel
             ->login(Login::class)
             ->colors([
                 'primary' => Color::Amber,
@@ -71,12 +78,22 @@ class AdminPanelProvider extends PanelProvider
             ->authMiddleware([
                 Authenticate::class,
             ])
-            ->plugins([
-                FilamentEmail::make(),
-                FilamentRouteStatisticsPlugin::make(),
-                FilamentCookieConsent::make(),
-                FilamentMatomo::make(),
-                //FilamentShieldPlugin::make(),
-            ]);
+            ->plugins($this->getPlugins());
+    }
+
+    private function getPlugins(): array
+    {
+        $plugins = [
+            FilamentEmail::make(),
+            FilamentRouteStatisticsPlugin::make(),
+            FilamentCookieConsent::make(),
+            FilamentMatomo::make(),
+        ];
+
+        if (config('filament-email-demo.filament_shield_enabled')) {
+            $plugins[] = FilamentShieldPlugin::make();
+        }
+
+        return $plugins;
     }
 }

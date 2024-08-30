@@ -73,7 +73,7 @@ class EmailFactory extends Factory
             }
         }
 
-        $datetime = $this->faker->dateTime();
+        $datetime = $this->faker->dateTimeBetween('-2 years');
 
         return [
             'from' => $this->faker->safeEmail(),

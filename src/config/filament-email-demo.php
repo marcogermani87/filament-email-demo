@@ -16,4 +16,8 @@ return [
 
     'chmod_permissions' => env('FILAMENT_EMAIL_DEMO_CHMOD_PERMISSION', 0775),
 
+    'tenant_enabled' => env('FILAMENT_EMAIL_DEMO_TENANT_ENABLED', false),
+
+    'filament_shield_enabled' => env('FILAMENT_EMAIL_DEMO_FILAMENT_SHIELD_ENABLED', false),
+
 ];
