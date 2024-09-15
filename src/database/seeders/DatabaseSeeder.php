@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        $tenantEnabled = config('filament-email-demo.tenant_enabled');
         $emailFactoryCount = config('filament-email-demo.email_factory_count');
 
         $filamentMakeUserCommand = new MakeUserCommand();
@@ -30,27 +31,29 @@ class DatabaseSeeder extends Seeder
             'password' => Hash::make('123Stella@'),
         ]);
 
-        $user = User::query()
-            ->first()
-            ->limit(1)
-            ->get();
+        if ($tenantEnabled) {
+            $user = User::query()
+                ->first()
+                ->limit(1)
+                ->get();
 
-        $teams = Team::factory()
-            ->count(2)
-            ->create();
+            $teams = Team::factory()
+                ->count(2)
+                ->create();
 
-        foreach ($teams as $team) {
-            $team->members()->attach($user[0]);
-            $team->save();
+            foreach ($teams as $team) {
+                $team->members()->attach($user[0]);
+                $team->save();
+                Email::factory()
+                    ->count($emailFactoryCount)
+                    ->create([
+                        'team_id' => $team->id,
+                    ]);
+            }
+        } else {
             Email::factory()
                 ->count($emailFactoryCount)
-                ->create([
-                    'team_id' => $team->id,
-                ]);
+                ->create();
         }
-
-        Email::factory()
-            ->count($emailFactoryCount)
-            ->create();
     }
 }

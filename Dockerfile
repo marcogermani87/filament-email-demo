@@ -1,5 +1,7 @@
 FROM php:8.3-fpm
 
+ENV TZ="Europe/Rome"
+
 RUN apt-get update && apt-get install -y \
     libpq-dev \
     build-essential \

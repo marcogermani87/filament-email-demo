@@ -45,4 +45,7 @@ return [
     //Create Team model and uncomment the line below to enable Tenant mode
     'tenant_model' => \App\Models\Team::class,
 
+    'db_connection' => 'filament-email',
+//    'db_connection' => null,
+
 ];

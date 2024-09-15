@@ -48,7 +48,7 @@ class EmailFactory extends Factory
         $counterWords = $this->faker->numberBetween(5, 10);
 
         if ($counter > 0) {
-            $savePath = 'filament-email-log' . DIRECTORY_SEPARATOR . date('YmdHis') . '_' . Str::random(8) . DIRECTORY_SEPARATOR;
+            $savePath = 'filament-email-log' . DIRECTORY_SEPARATOR . now()->format('YmdHis') . '_' . Str::random(8) . DIRECTORY_SEPARATOR;
 
             if (!file_exists($savePath)) {
                 Storage::makeDirectory($savePath);
