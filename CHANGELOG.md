@@ -2,6 +2,16 @@
 
 All notable changes to `filament-email-demo` will be documented in this file.
 
+## v1.3.0 - 2024-08-30
+
+### What's Changed
+
+* Fixed boot Gate for super_admin
+* Added SPA support for production
+* Bump rickdbcn/filament-email to v1.6.0
+
+**Full Changelog**: https://github.com/marcogermani87/filament-email-demo/compare/v1.2.1...v1.3.0
+
 ## v1.2.1 - 2024-07-27
 
 ### What's Changed
