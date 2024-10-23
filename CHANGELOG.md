@@ -2,6 +2,17 @@
 
 All notable changes to `filament-email-demo` will be documented in this file.
 
+## v1.5.0 - 2024-10-23
+
+### What's Changed
+
+* Updated deps
+* Fixed dashboard widgets.
+* Bump rickdbcn/filament-email to v1.6.2
+* Added new package marcogermani87/filament-captcha
+
+**Full Changelog**: https://github.com/marcogermani87/filament-email-demo/compare/v.1.4.0...v1.5.0
+
 ## v1.4.0 - 2024-09-15
 
 ### What's Changed
