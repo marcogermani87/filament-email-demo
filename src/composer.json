@@ -15,7 +15,9 @@
         "laravel/framework": "^11.0",
         "laravel/octane": "^2.3",
         "laravel/tinker": "^2.9",
+        "marcogermani87/filament-captcha": "^1.0",
         "marcogermani87/filament-cookie-consent": "^1.0",
+        "marcogermani87/filament-hcaptcha": "dev-main",
         "marcogermani87/filament-matomo": "^1.0",
         "rickdbcn/filament-email": "^1.6"
     },

@@ -10,8 +10,12 @@ class FilamentEmailInfoWidget extends Widget
 
     protected static bool $isLazy = false;
 
-    /**
-     * @var view-string
-     */
-    protected static string $view = 'widgets.filament-email-info-widget';
+    protected int | string | array $columnSpan = [
+        'default' => 'full',
+        'sm' => 2,
+        'md' => 2,
+        'xl' => 1,
+    ];
+
+    protected static string $view = 'filament.widgets.filament-email-info-widget';
 }

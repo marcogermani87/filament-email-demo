@@ -213,6 +213,17 @@
       'FilamentDaterangepickerFilter' => 'Malzariey\\FilamentDaterangepickerFilter\\Facades\\FilamentDaterangepickerFilter',
     ),
   ),
+  'marcogermani87/filament-captcha' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'MarcoGermani87\\FilamentCaptcha\\FilamentCaptchaServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'FilamentCaptcha' => 'MarcoGermani87\\FilamentCaptcha\\Facades\\FilamentCaptcha',
+    ),
+  ),
   'marcogermani87/filament-cookie-consent' => 
   array (
     'providers' => 
@@ -222,6 +233,17 @@
     'aliases' => 
     array (
       'Skeleton' => 'MarcoGermani87\\FilamentCookieConsent\\Facades\\FilamentCookieConsent',
+    ),
+  ),
+  'marcogermani87/filament-hcaptcha' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'MarcoGermani87\\FilamentHcaptcha\\FilamentHcaptchaServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'FilamentHcaptcha' => 'MarcoGermani87\\FilamentHcaptcha\\Facades\\FilamentHcaptcha',
     ),
   ),
   'marcogermani87/filament-matomo' => 
@@ -265,6 +287,17 @@
     'aliases' => 
     array (
       'FilamentEmail' => 'RickDBCN\\FilamentEmail\\Facades\\FilamentEmail',
+    ),
+  ),
+  'rvxlab/hcaptcha' => 
+  array (
+    'aliases' => 
+    array (
+      'HCaptcha' => 'Scyllaly\\HCaptcha\\Facades\\HCaptcha',
+    ),
+    'providers' => 
+    array (
+      0 => 'Scyllaly\\HCaptcha\\Providers\\HCaptchaServiceProvider',
     ),
   ),
   'ryangjchandler/blade-capture-directive' => 

@@ -4,9 +4,9 @@ namespace App\Filament\Widgets;
 
 use Filament\Widgets\Widget;
 
-class FilamentCookieConsentInfoWidget extends Widget
+class FilamentCaptchaInfoWidget extends Widget
 {
-    protected static ?int $sort = 1;
+    protected static ?int $sort = 2;
 
     protected static bool $isLazy = false;
 
@@ -17,5 +17,5 @@ class FilamentCookieConsentInfoWidget extends Widget
         'xl' => 1,
     ];
 
-    protected static string $view = 'filament.widgets.filament-cookie-consent-info-widget';
+    protected static string $view = 'filament.widgets.filament-captcha-info-widget';
 }

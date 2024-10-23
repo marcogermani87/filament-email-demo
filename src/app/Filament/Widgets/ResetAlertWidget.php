@@ -15,5 +15,5 @@ class ResetAlertWidget extends Widget
     /**
      * @var view-string
      */
-    protected static string $view = 'widgets.reset-alert-widget';
+    protected static string $view = 'filament.widgets.reset-alert-widget';
 }
