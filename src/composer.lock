@@ -6109,20 +6109,20 @@
         },
         {
             "name": "rickdbcn/filament-email",
-            "version": "v1.6.2",
+            "version": "v1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RickDBCN/filament-email.git",
-                "reference": "31942f0eec46d9e67f1ba8a7dbf3249eb3fd818b"
+                "reference": "533a15230d471141cdb98cae32a5b5b3bb2d2a2f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RickDBCN/filament-email/zipball/31942f0eec46d9e67f1ba8a7dbf3249eb3fd818b",
-                "reference": "31942f0eec46d9e67f1ba8a7dbf3249eb3fd818b",
+                "url": "https://api.github.com/repos/RickDBCN/filament-email/zipball/533a15230d471141cdb98cae32a5b5b3bb2d2a2f",
+                "reference": "533a15230d471141cdb98cae32a5b5b3bb2d2a2f",
                 "shasum": ""
             },
             "require": {
-                "filament/filament": "^3.0",
+                "filament/filament": "^3.2",
                 "illuminate/contracts": "^10.0|^11.0",
                 "laravel/framework": "^10.0|^11.0",
                 "malzariey/filament-daterangepicker-filter": "^3.0",
@@ -6176,9 +6176,9 @@
             ],
             "support": {
                 "issues": "https://github.com/RickDBCN/filament-email/issues",
-                "source": "https://github.com/RickDBCN/filament-email/tree/v1.6.2"
+                "source": "https://github.com/RickDBCN/filament-email/tree/v1.7.0"
             },
-            "time": "2024-09-15T15:15:33+00:00"
+            "time": "2024-11-01T21:58:06+00:00"
         },
         {
             "name": "rvxlab/hcaptcha",

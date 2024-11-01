@@ -26,6 +26,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         if (App::environment('production')) {
+            $this->app['request']->server->set('HTTPS', 'on');
             URL::forceScheme('https');
         }
         LanguageSwitch::configureUsing(function (LanguageSwitch $switch) {

@@ -36,7 +36,7 @@ class AdminPanelProvider extends PanelProvider
 {
     public function panel(Panel $panel): Panel
     {
-        $panel = $panel
+        $panel
             ->default()
             ->id('admin')
             ->path('admin')
