@@ -2,6 +2,15 @@
 
 All notable changes to `filament-email-demo` will be documented in this file.
 
+## v1.5.1 - 2024-11-01
+
+### What's Changed
+
+* Updated deps
+* Fixed dashboard alert widget.
+
+**Full Changelog**: https://github.com/marcogermani87/filament-email-demo/compare/v1.5.0...v1.5.1
+
 ## v1.5.0 - 2024-10-23
 
 ### What's Changed
