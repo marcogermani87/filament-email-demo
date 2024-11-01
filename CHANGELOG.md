@@ -2,6 +2,15 @@
 
 All notable changes to `filament-email-demo` will be documented in this file.
 
+## v1.5.2 - 2024-11-01
+
+### What's Changed
+
+* Updated deps
+* Fixed SPA when force https is active.
+
+**Full Changelog**: https://github.com/marcogermani87/filament-email-demo/compare/v1.5.1...v1.5.2
+
 ## v1.5.1 - 2024-11-01
 
 ### What's Changed
