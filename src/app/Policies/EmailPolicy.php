@@ -15,7 +15,7 @@ class EmailPolicy
      */
     public function viewAny(User $user): bool
     {
-        return $user->can('view_any_email');
+        return !config('filament-email-demo.filament_shield_enabled') || $user->can('view_any_email');
     }
 
     /**
@@ -23,7 +23,7 @@ class EmailPolicy
      */
     public function view(User $user, Email $email): bool
     {
-        return $user->can('view_email');
+        return  !config('filament-email-demo.filament_shield_enabled') || $user->can('view_email');
     }
 
     /**
@@ -31,7 +31,7 @@ class EmailPolicy
      */
     public function create(User $user): bool
     {
-        return $user->can('create_email');
+        return  !config('filament-email-demo.filament_shield_enabled') || $user->can('create_email');
     }
 
     /**
@@ -39,7 +39,7 @@ class EmailPolicy
      */
     public function update(User $user, Email $email): bool
     {
-        return $user->can('update_email');
+        return  !config('filament-email-demo.filament_shield_enabled') || $user->can('update_email');
     }
 
     /**
@@ -47,7 +47,7 @@ class EmailPolicy
      */
     public function delete(User $user, Email $email): bool
     {
-        return $user->can('delete_email');
+        return  !config('filament-email-demo.filament_shield_enabled') || $user->can('delete_email');
     }
 
     /**
@@ -55,7 +55,7 @@ class EmailPolicy
      */
     public function deleteAny(User $user): bool
     {
-        return $user->can('delete_any_email');
+        return  !config('filament-email-demo.filament_shield_enabled') || $user->can('delete_any_email');
     }
 
     /**
@@ -63,7 +63,7 @@ class EmailPolicy
      */
     public function forceDelete(User $user, Email $email): bool
     {
-        return $user->can('force_delete_email');
+        return  !config('filament-email-demo.filament_shield_enabled') || $user->can('force_delete_email');
     }
 
     /**
@@ -71,7 +71,7 @@ class EmailPolicy
      */
     public function forceDeleteAny(User $user): bool
     {
-        return $user->can('force_delete_any_email');
+        return  !config('filament-email-demo.filament_shield_enabled') || $user->can('force_delete_any_email');
     }
 
     /**
@@ -79,7 +79,7 @@ class EmailPolicy
      */
     public function restore(User $user, Email $email): bool
     {
-        return $user->can('restore_email');
+        return  !config('filament-email-demo.filament_shield_enabled') || $user->can('restore_email');
     }
 
     /**
@@ -87,7 +87,7 @@ class EmailPolicy
      */
     public function restoreAny(User $user): bool
     {
-        return $user->can('restore_any_email');
+        return  !config('filament-email-demo.filament_shield_enabled') || $user->can('restore_any_email');
     }
 
     /**
@@ -95,7 +95,7 @@ class EmailPolicy
      */
     public function replicate(User $user, Email $email): bool
     {
-        return $user->can('replicate_email');
+        return  !config('filament-email-demo.filament_shield_enabled') || $user->can('replicate_email');
     }
 
     /**
@@ -103,6 +103,6 @@ class EmailPolicy
      */
     public function reorder(User $user): bool
     {
-        return $user->can('reorder_email');
+        return  !config('filament-email-demo.filament_shield_enabled') || $user->can('reorder_email');
     }
 }

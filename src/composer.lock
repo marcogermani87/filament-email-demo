@@ -4727,20 +4727,20 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "3.8.0",
+            "version": "3.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "bbd3eef89af8ba66a3aa7952b5439168fbcc529f"
+                "reference": "10ac0aa86b8062219ce21e8189123d611ca3ecd9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/bbd3eef89af8ba66a3aa7952b5439168fbcc529f",
-                "reference": "bbd3eef89af8ba66a3aa7952b5439168fbcc529f",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/10ac0aa86b8062219ce21e8189123d611ca3ecd9",
+                "reference": "10ac0aa86b8062219ce21e8189123d611ca3ecd9",
                 "shasum": ""
             },
             "require": {
-                "carbonphp/carbon-doctrine-types": "*",
+                "carbonphp/carbon-doctrine-types": "<100.0",
                 "ext-json": "*",
                 "php": "^8.1",
                 "psr/clock": "^1.0",
@@ -4829,7 +4829,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-08-19T06:22:39+00:00"
+            "time": "2024-11-03T16:02:24+00:00"
         },
         {
             "name": "nette/schema",
@@ -6109,16 +6109,16 @@
         },
         {
             "name": "rickdbcn/filament-email",
-            "version": "v1.7.0",
+            "version": "v1.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RickDBCN/filament-email.git",
-                "reference": "533a15230d471141cdb98cae32a5b5b3bb2d2a2f"
+                "reference": "0766b7ed8f0ec8a2b54322051b8b7003d641353e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RickDBCN/filament-email/zipball/533a15230d471141cdb98cae32a5b5b3bb2d2a2f",
-                "reference": "533a15230d471141cdb98cae32a5b5b3bb2d2a2f",
+                "url": "https://api.github.com/repos/RickDBCN/filament-email/zipball/0766b7ed8f0ec8a2b54322051b8b7003d641353e",
+                "reference": "0766b7ed8f0ec8a2b54322051b8b7003d641353e",
                 "shasum": ""
             },
             "require": {
@@ -6176,9 +6176,9 @@
             ],
             "support": {
                 "issues": "https://github.com/RickDBCN/filament-email/issues",
-                "source": "https://github.com/RickDBCN/filament-email/tree/v1.7.0"
+                "source": "https://github.com/RickDBCN/filament-email/tree/v1.7.1"
             },
-            "time": "2024-11-01T21:58:06+00:00"
+            "time": "2024-11-03T21:44:55+00:00"
         },
         {
             "name": "rvxlab/hcaptcha",

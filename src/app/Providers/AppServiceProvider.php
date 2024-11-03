@@ -15,9 +15,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        Gate::before(function ($user, $ability) {
-            return $user->hasRole('super_admin') ? true : null;
-        });
+        if (config('filament-email-demo.filament_shield_enabled')) {
+            Gate::before(function ($user, $ability) {
+                return $user->hasRole('super_admin') ? true : null;
+            });
+        }
     }
 
     /**
