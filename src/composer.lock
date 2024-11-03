@@ -3995,16 +3995,16 @@
         },
         {
             "name": "marcogermani87/filament-captcha",
-            "version": "v1.0.0",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/marcogermani87/filament-captcha.git",
-                "reference": "4423e05273f8b462e84e49a85ebecd4ef7594a60"
+                "reference": "608f6299e037355fea30bdc1aaa2a6f0e7daec11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/marcogermani87/filament-captcha/zipball/4423e05273f8b462e84e49a85ebecd4ef7594a60",
-                "reference": "4423e05273f8b462e84e49a85ebecd4ef7594a60",
+                "url": "https://api.github.com/repos/marcogermani87/filament-captcha/zipball/608f6299e037355fea30bdc1aaa2a6f0e7daec11",
+                "reference": "608f6299e037355fea30bdc1aaa2a6f0e7daec11",
                 "shasum": ""
             },
             "require": {
@@ -4064,7 +4064,7 @@
             ],
             "support": {
                 "issues": "https://github.com/marcogermani87/filament-captcha/issues",
-                "source": "https://github.com/marcogermani87/filament-captcha/tree/v1.0.0"
+                "source": "https://github.com/marcogermani87/filament-captcha/tree/v1.1.0"
             },
             "funding": [
                 {
@@ -4072,7 +4072,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-10-21T23:49:58+00:00"
+            "time": "2024-11-03T23:16:24+00:00"
         },
         {
             "name": "marcogermani87/filament-cookie-consent",
