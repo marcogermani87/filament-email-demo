@@ -2,6 +2,15 @@
 
 All notable changes to `filament-email-demo` will be documented in this file.
 
+## v1.6.0 - 2024-11-06
+
+### What's Changed
+
+* Added demo install command
+* Updated deps
+
+**Full Changelog**: https://github.com/marcogermani87/filament-email-demo/compare/v1.5.3...v1.6.0
+
 ## v1.5.3 - 2024-11-03
 
 ### What's Changed
