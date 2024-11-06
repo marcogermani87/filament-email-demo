@@ -3,6 +3,22 @@
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Artisan;
 
+Artisan::command('demo:install', function () {
+    $this->call('down');
+    $this->call('migrate', [
+        '--force' => true,
+    ]);
+    Log::info("Executed artisan migrate --force", ['command' => $this->signature]);
+    $this->call('db:seed', [
+        '--force' => true,
+    ]);
+    Log::info("Executed artisan migrate:seed --force", ['command' => $this->signature]);
+    $this->call('key:generate');
+    Log::info("Executed artisan key:generate", ['command' => $this->signature]);
+    $this->call('up');
+    Log::info("Executed artisan up", ['command' => $this->signature]);
+})->purpose('Install application');
+
 Artisan::command('demo:refresh', function () {
     $this->call('down');
     Log::info("Executed artisan down", ['command' => $this->signature]);

@@ -28,7 +28,7 @@ cp .env.production .env
 Build and start docker containers:
 
 ```bash
-docker-compose --profile=prod up -d
+docker compose --profile=prod up -d
 ```
 
 Enable application .env config:
@@ -40,13 +40,19 @@ cp src/.env.example src/.env
 Install dependencies:
 
 ```bash
-docker-compose exec php bash -c "cd ../ && composer install"
+docker compose exec php bash -c "cd ../ && composer install"
 ```
 
-Run migrations with seeds:
+Install application data:
 
 ```bash
-docker-compose exec php bash -c "cd .. && php -d memory_limit=-1 artisan demo:refresh"
+docker compose exec php bash -c "cd .. && php -d memory_limit=-1 artisan demo:install"
+```
+
+Refresh application data:
+
+```bash
+docker compose exec php bash -c "cd .. && php -d memory_limit=-1 artisan demo:refresh"
 ```
 
 You're ready to go! Visit the url http://localhost:8001 in your browser, and login with:
