@@ -2,6 +2,8 @@
 
 return [
 
+    'force_https' => env('FILAMENT_FORCE_HTTPS', false),
+
     'email_factory_count' => env('FILAMENT_EMAIL_FACTORY_COUNT', 25),
 
     'email_factory_to_max' => env('FILAMENT_EMAIL_FACTORY_TO_MAX', 3),
