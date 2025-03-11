@@ -7,19 +7,18 @@
     "require": {
         "php": "^8.2",
         "amendozaaguiar/filament-route-statistics": "^3.0",
-        "bezhansalleh/filament-language-switch": "^3.1",
-        "bezhansalleh/filament-shield": "^3.2",
-        "carlos-meneses/laravel-mpdf": "^2.1",
-        "filament/filament": "^3.2",
+        "bezhansalleh/filament-language-switch": "^3.0",
+        "bezhansalleh/filament-shield": "^3.0",
+        "carlos-meneses/laravel-mpdf": "^2.0",
+        "filament/filament": "^3.0",
         "laracraft-tech/laravel-useful-additions": "^4.0",
         "laravel/framework": "^11.0",
-        "laravel/octane": "^2.3",
-        "laravel/tinker": "^2.9",
+        "laravel/octane": "^2.0",
+        "laravel/tinker": "^2.0",
         "marcogermani87/filament-captcha": "^1.0",
         "marcogermani87/filament-cookie-consent": "^1.0",
-        "marcogermani87/filament-hcaptcha": "dev-main",
         "marcogermani87/filament-matomo": "^1.0",
-        "rickdbcn/filament-email": "^1.6"
+        "rickdbcn/filament-email": "^1.0"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.13",

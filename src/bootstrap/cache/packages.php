@@ -15,13 +15,13 @@
   ),
   'barryvdh/laravel-debugbar' => 
   array (
-    'providers' => 
-    array (
-      0 => 'Barryvdh\\Debugbar\\ServiceProvider',
-    ),
     'aliases' => 
     array (
       'Debugbar' => 'Barryvdh\\Debugbar\\Facades\\Debugbar',
+    ),
+    'providers' => 
+    array (
+      0 => 'Barryvdh\\Debugbar\\ServiceProvider',
     ),
   ),
   'bezhansalleh/filament-language-switch' => 
@@ -33,13 +33,13 @@
   ),
   'bezhansalleh/filament-shield' => 
   array (
-    'providers' => 
-    array (
-      0 => 'BezhanSalleh\\FilamentShield\\FilamentShieldServiceProvider',
-    ),
     'aliases' => 
     array (
       'FilamentShield' => 'BezhanSalleh\\FilamentShield\\Facades\\FilamentShield',
+    ),
+    'providers' => 
+    array (
+      0 => 'BezhanSalleh\\FilamentShield\\FilamentShieldServiceProvider',
     ),
   ),
   'bilfeldt/laravel-correlation-id' => 
@@ -51,13 +51,13 @@
   ),
   'bilfeldt/laravel-request-logger' => 
   array (
-    'providers' => 
-    array (
-      0 => 'Bilfeldt\\RequestLogger\\RequestLoggerServiceProvider',
-    ),
     'aliases' => 
     array (
       'RequestLogger' => 'Bilfeldt\\RequestLogger\\RequestLoggerFacade',
+    ),
+    'providers' => 
+    array (
+      0 => 'Bilfeldt\\RequestLogger\\RequestLoggerServiceProvider',
     ),
   ),
   'bilfeldt/laravel-route-statistics' => 
@@ -157,24 +157,24 @@
   ),
   'laracraft-tech/laravel-useful-additions' => 
   array (
-    'providers' => 
-    array (
-      0 => 'LaracraftTech\\LaravelUsefulAdditions\\LaravelUsefulAdditionsServiceProvider',
-    ),
     'aliases' => 
     array (
       'LaravelUsefulAdditions' => 'LaracraftTech\\LaravelUsefulAdditions\\Facades\\LaravelUsefulAdditions',
     ),
+    'providers' => 
+    array (
+      0 => 'LaracraftTech\\LaravelUsefulAdditions\\LaravelUsefulAdditionsServiceProvider',
+    ),
   ),
   'laravel/octane' => 
   array (
-    'providers' => 
-    array (
-      0 => 'Laravel\\Octane\\OctaneServiceProvider',
-    ),
     'aliases' => 
     array (
       'Octane' => 'Laravel\\Octane\\Facades\\Octane',
+    ),
+    'providers' => 
+    array (
+      0 => 'Laravel\\Octane\\OctaneServiceProvider',
     ),
   ),
   'laravel/sail' => 
@@ -193,68 +193,57 @@
   ),
   'livewire/livewire' => 
   array (
-    'providers' => 
-    array (
-      0 => 'Livewire\\LivewireServiceProvider',
-    ),
     'aliases' => 
     array (
       'Livewire' => 'Livewire\\Livewire',
     ),
+    'providers' => 
+    array (
+      0 => 'Livewire\\LivewireServiceProvider',
+    ),
   ),
   'malzariey/filament-daterangepicker-filter' => 
   array (
-    'providers' => 
-    array (
-      0 => 'Malzariey\\FilamentDaterangepickerFilter\\FilamentDaterangepickerFilterServiceProvider',
-    ),
     'aliases' => 
     array (
       'FilamentDaterangepickerFilter' => 'Malzariey\\FilamentDaterangepickerFilter\\Facades\\FilamentDaterangepickerFilter',
     ),
+    'providers' => 
+    array (
+      0 => 'Malzariey\\FilamentDaterangepickerFilter\\FilamentDaterangepickerFilterServiceProvider',
+    ),
   ),
   'marcogermani87/filament-captcha' => 
   array (
-    'providers' => 
-    array (
-      0 => 'MarcoGermani87\\FilamentCaptcha\\FilamentCaptchaServiceProvider',
-    ),
     'aliases' => 
     array (
       'FilamentCaptcha' => 'MarcoGermani87\\FilamentCaptcha\\Facades\\FilamentCaptcha',
     ),
+    'providers' => 
+    array (
+      0 => 'MarcoGermani87\\FilamentCaptcha\\FilamentCaptchaServiceProvider',
+    ),
   ),
   'marcogermani87/filament-cookie-consent' => 
   array (
-    'providers' => 
-    array (
-      0 => 'MarcoGermani87\\FilamentCookieConsent\\FilamentCookieConsentServiceProvider',
-    ),
     'aliases' => 
     array (
       'Skeleton' => 'MarcoGermani87\\FilamentCookieConsent\\Facades\\FilamentCookieConsent',
     ),
-  ),
-  'marcogermani87/filament-hcaptcha' => 
-  array (
     'providers' => 
     array (
-      0 => 'MarcoGermani87\\FilamentHcaptcha\\FilamentHcaptchaServiceProvider',
-    ),
-    'aliases' => 
-    array (
-      'FilamentHcaptcha' => 'MarcoGermani87\\FilamentHcaptcha\\Facades\\FilamentHcaptcha',
+      0 => 'MarcoGermani87\\FilamentCookieConsent\\FilamentCookieConsentServiceProvider',
     ),
   ),
   'marcogermani87/filament-matomo' => 
   array (
-    'providers' => 
-    array (
-      0 => 'MarcoGermani87\\FilamentMatomo\\FilamentMatomoServiceProvider',
-    ),
     'aliases' => 
     array (
       'FilamentMatomo' => 'MarcoGermani87\\FilamentMatomo\\Facades\\FilamentMatomo',
+    ),
+    'providers' => 
+    array (
+      0 => 'MarcoGermani87\\FilamentMatomo\\FilamentMatomoServiceProvider',
     ),
   ),
   'nesbot/carbon' => 
@@ -280,35 +269,24 @@
   ),
   'rickdbcn/filament-email' => 
   array (
-    'providers' => 
-    array (
-      0 => 'RickDBCN\\FilamentEmail\\FilamentEmailServiceProvider',
-    ),
     'aliases' => 
     array (
       'FilamentEmail' => 'RickDBCN\\FilamentEmail\\Facades\\FilamentEmail',
     ),
-  ),
-  'rvxlab/hcaptcha' => 
-  array (
-    'aliases' => 
-    array (
-      'HCaptcha' => 'Scyllaly\\HCaptcha\\Facades\\HCaptcha',
-    ),
     'providers' => 
     array (
-      0 => 'Scyllaly\\HCaptcha\\Providers\\HCaptchaServiceProvider',
+      0 => 'RickDBCN\\FilamentEmail\\FilamentEmailServiceProvider',
     ),
   ),
   'ryangjchandler/blade-capture-directive' => 
   array (
-    'providers' => 
-    array (
-      0 => 'RyanChandler\\BladeCaptureDirective\\BladeCaptureDirectiveServiceProvider',
-    ),
     'aliases' => 
     array (
       'BladeCaptureDirective' => 'RyanChandler\\BladeCaptureDirective\\Facades\\BladeCaptureDirective',
+    ),
+    'providers' => 
+    array (
+      0 => 'RyanChandler\\BladeCaptureDirective\\BladeCaptureDirectiveServiceProvider',
     ),
   ),
   'spatie/laravel-cookie-consent' => 
@@ -320,13 +298,13 @@
   ),
   'spatie/laravel-ignition' => 
   array (
-    'providers' => 
-    array (
-      0 => 'Spatie\\LaravelIgnition\\IgnitionServiceProvider',
-    ),
     'aliases' => 
     array (
       'Flare' => 'Spatie\\LaravelIgnition\\Facades\\Flare',
+    ),
+    'providers' => 
+    array (
+      0 => 'Spatie\\LaravelIgnition\\IgnitionServiceProvider',
     ),
   ),
   'spatie/laravel-permission' => 
